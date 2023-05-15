@@ -1,0 +1,30 @@
+svg, p{
+    color: white;
+}
+
+hr{
+    border-color: white;
+}
+
+.imgAmici{
+    border-radius: 100%;
+}
+
+#divSinistra{
+    margin-left: 20px;
+}
+
+.testoPiccolo{
+    font-size: xx-small;
+    margin-bottom: 5px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:visited{
+    text-decoration: none;
+    color: white;
+}
