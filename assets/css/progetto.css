@@ -1,4 +1,4 @@
-svg, p{
+svg, p, h2{
     color: white;
 }
 
@@ -27,4 +27,44 @@ a{
 a:visited{
     text-decoration: none;
     color: white;
+}
+
+.imgDestra{
+    border-radius: 100%;
+    width: 25px;
+    margin: 0.5rem;
+}
+
+.textDestra{
+    color:white;
+    margin: 0;
+    padding: 0;
+}
+
+.bg-black{
+    background-color: black;
+}
+
+#utente{
+    border-radius: 100%;
+    width: 20px;
+    margin: 0;
+}
+
+#contenitore-utente{
+    border-radius: 20px;
+    background-color: black;
+    padding-right: 5px;
+}
+
+span{
+    color:white;
+}
+
+#hero-img{
+    width: 100%;
+}
+
+#cont-img-hero{
+
 }
