@@ -66,20 +66,8 @@ async function firstSelection() {
 
         const jsonArray = myJson.data
         const myOggetto = myJson.data.length
-        const randomArray = myRandomFunction();
+        const randomArray = myRandomFunction(myOggetto);
 
-        // RICHIAMO FUNZIONE GENERATORE NUMERI RANDOM
-        function myRandomFunction() {
-            let i = 0;
-            let counterArray = [];
-            while (i < 5) {
-                randomNumber = Math.floor(Math.random() * myOggetto) + 1
-                if (!counterArray.includes(randomNumber)) {
-                    counterArray.push(randomNumber)
-                    i++
-                }
-            } return counterArray
-        }
 
         // POPOLAZIONE CARD ALBUM
         rigaSelection1.innerHTML = "";
@@ -100,7 +88,7 @@ async function firstSelection() {
     }
 }
 
-// SECONDA FUNZIONE ASINCRONA PER CREAZIONE ALTRI 5 TITOLI CASUALI DI ALBUM DI UN AUTORE
+// // SECONDA FUNZIONE ASINCRONA PER CREAZIONE ALTRI 5 TITOLI CASUALI DI ALBUM DI UN AUTORE
 async function secondSelection() {
     const urlSelection = "https://striveschool-api.herokuapp.com/api/deezer/search?q=maroon5"
 
@@ -115,21 +103,7 @@ async function secondSelection() {
 
         const jsonArray = myJson.data
         const myOggetto = myJson.data.length
-        const randomArray = myRandomFunction();
-        console.log(jsonArray)
-        console.log(randomArray)
-
-        function myRandomFunction() {
-            let i = 0;
-            let counterArray = [];
-            while (i < 5) {
-                randomNumber = Math.floor(Math.random() * myOggetto) + 1
-                if (!counterArray.includes(randomNumber)) {
-                    counterArray.push(randomNumber)
-                    i++
-                }
-            } return counterArray
-        }
+        const randomArray = myRandomFunction(myOggetto);
 
         rigaSelection2.innerHTML = "";
         for (let i of randomArray) {
@@ -149,7 +123,7 @@ async function secondSelection() {
     }
 }
 
-// TERZA FUNZIONE ASINCRONA PER CREAZIONE ALTRI 5 TITOLI CASUALI DI ALBUM DI UN AUTORE
+// // TERZA FUNZIONE ASINCRONA PER CREAZIONE ALTRI 5 TITOLI CASUALI DI ALBUM DI UN AUTORE
 async function thirdSelection() {
     const urlSelection = "https://striveschool-api.herokuapp.com/api/deezer/search?q=,muse"
 
@@ -163,21 +137,7 @@ async function thirdSelection() {
 
         const jsonArray = myJson.data
         const myOggetto = myJson.data.length
-        const randomArray = myRandomFunction();
-        console.log(jsonArray)
-        console.log(randomArray)
-
-        function myRandomFunction() {
-            let i = 0;
-            let counterArray = [];
-            while (i < 5) {
-                randomNumber = Math.floor(Math.random() * myOggetto) + 1
-                if (!counterArray.includes(randomNumber)) {
-                    counterArray.push(randomNumber)
-                    i++
-                }
-            } return counterArray
-        }
+        const randomArray = myRandomFunction(myOggetto);
 
         rigaSelection3.innerHTML = "";
         for (let i of randomArray) {
@@ -200,8 +160,8 @@ async function thirdSelection() {
 window.onload = () => {
     playlist();
     firstSelection();
-    secondSelection();
-    thirdSelection();
+    // secondSelection();
+    // thirdSelection();
 }
 
 const playlistNames = [
