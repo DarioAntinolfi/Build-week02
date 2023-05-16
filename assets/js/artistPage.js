@@ -1,9 +1,11 @@
+// DEFINIZIONE 
+
 const url = "https://striveschool-api.herokuapp.com/api/deezer/search?q=";
 const urlId = new URLSearchParams(location.search).get("q");
 const searchUrl = `${url}${urlId}`;
 const artistArray = [];
 const riga = document.querySelector(".row");
-
+console.log(artistArray)
 
 
 async function retrieveSingleArtist() {
@@ -16,11 +18,16 @@ async function retrieveSingleArtist() {
 
         const myJson = await data.json();
 
-        console.log(myJson)
-
         artistArray.push(myJson);
 
-        console.log(artistArray)
+    } catch (error) {
+        console.error("fetch non andata a buon fine")
+    }
+}
+
+
+async function mostPopular() {
+    try {
 
         const popularTracksUrl = artistArray[0].data[0].artist.tracklist
 
@@ -36,6 +43,8 @@ async function retrieveSingleArtist() {
         console.log(popularJson)
 
         riga.innerHTML = "";
+
+
         let j = 1
         for (let i of popularJson.data) {
 
@@ -47,7 +56,7 @@ async function retrieveSingleArtist() {
                 }</li>
             <li class="list-group-item rank">${i.rank
                 }</li>
-            <li class="list-group-item duration">${i.duration}
+            <li class="list-group-item duration">${time(i.duration)}
                 </li>
           </ul>`
             j++
@@ -58,6 +67,12 @@ async function retrieveSingleArtist() {
     catch (error) {
         console.error("fetch non eseguita")
     }
+}
+
+const time = (num) => {
+    let minutes = Math.floor(num / 60)
+    let seconds = num % 60;
+    return minutes.toString().padStart(2, '0') + ":" + seconds.toString().padStart(2, '0')
 }
 
 // async function popularTracks() {
@@ -86,4 +101,5 @@ async function retrieveSingleArtist() {
 
 window.onload = async () => {
     await retrieveSingleArtist()
+    mostPopular();
 }
