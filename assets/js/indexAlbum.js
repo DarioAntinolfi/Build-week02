@@ -1,6 +1,7 @@
 const albumUrl = "https://striveschool-api.herokuapp.com/api/deezer/album/"
 const urlId = new URLSearchParams(location.search).get("id");
 const searchUrl = `${albumUrl}${urlId}`;
+const urlArtist = new URLSearchParams(location.search).get("art");
 const riga = document.querySelector(".rigaAlbum");
 const dettagliAlbum = document.querySelector(".dettagliAlbum");
 const titoloAlbum = document.querySelector(".titoloAlbum");
@@ -45,7 +46,7 @@ async function retrieveSingleAlbum() {
                 <li class="list-group-item image"><img src="${i.album.cover
                 }"></li><li class="list-group-item title">${i.title
                 }</li>
-                <li class="list-group-item artist"><a href="indexArtisti.html">${i.artist.name
+                <li class="list-group-item artist"><a href="indexArtisti.html?id=${urlArtist}">${i.artist.name
                 }</a></li>
                 <li class="list-group-item rank">${i.rank
                 }</li>

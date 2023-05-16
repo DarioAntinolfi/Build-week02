@@ -58,10 +58,10 @@ async function firstSelection() {
         for (let i of randomArray) {
             console.log(jsonArray[i].album.cover)
             rigaSelection1.innerHTML += `<div class="card-container col-2"><div class="card h-100">
-            <a href="indexAlbum.html?id=${jsonArray[i].album.id}"><img src="${jsonArray[i].album.cover}" class="card-img-top" alt="album cover"></a>
+            <a href="indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}"><img src="${jsonArray[i].album.cover}" class="card-img-top" alt="album cover"></a>
             <div class="card-body">
               <a href="indexArtisti.html?id=${jsonArray[i].artist.id}"> <h5 class="card-title">${jsonArray[i].artist.name}</h5> </a>
-              <a href="indexAlbum.html?id=${jsonArray[i].album.id}"> <p class="card-text">${jsonArray[i].album.title}</p></a> 
+              <a href="indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}"> <p class="card-text">${jsonArray[i].album.title}</p></a> 
             </div>
             </div>
             </div>`
@@ -96,10 +96,10 @@ async function secondSelection() {
         for (let i of randomArray) {
             console.log(jsonArray[i].album.cover)
             rigaSelection2.innerHTML += `<div class="card-container col-2"><div class="card h-100">
-            <a href="indexAlbum.html?id=${jsonArray[i].album.id}"><img src="${jsonArray[i].album.cover}" class="card-img-top" alt="album cover"></a>
+            <a href="indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}"><img src="${jsonArray[i].album.cover}" class="card-img-top" alt="album cover"></a>
             <div class="card-body">
               <a href="indexArtisti.html?id=${jsonArray[i].artist.id}"> <h5 class="card-title">${jsonArray[i].artist.name}</h5> </a>
-              <a href="indexAlbum.html?id=${jsonArray[i].album.id}"> <p class="card-text">${jsonArray[i].album.title}</p></a> 
+              <a href="indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}"> <p class="card-text">${jsonArray[i].album.title}</p></a> 
             </div>
             </div>
             </div>`
@@ -131,10 +131,10 @@ async function thirdSelection() {
         for (let i of randomArray) {
             console.log(jsonArray[i].album.cover)
             rigaSelection3.innerHTML += `<div class="card-container col-2"><div class="card h-100">
-            <a href="indexAlbum.html?id=${jsonArray[i].album.id}"><img src="${jsonArray[i].album.cover}" class="card-img-top" alt="album cover"></a>
+            <a href="indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}"><img src="${jsonArray[i].album.cover}" class="card-img-top" alt="album cover"></a>
             <div class="card-body">
               <a href="indexArtisti.html?id=${jsonArray[i].artist.id}"> <h5 class="card-title">${jsonArray[i].artist.name}</h5> </a>
-              <a href="indexAlbum.html?id=${jsonArray[i].album.id}"> <p class="card-text">${jsonArray[i].album.title}</p></a> 
+              <a href="indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}"> <p class="card-text">${jsonArray[i].album.title}</p></a> 
             </div>
             </div>
             </div>`

@@ -32,10 +32,6 @@ async function retrieveArtist() {
         const myJsonPopuplarTrack = await popularTrack.json();
 
 
-
-
-
-
         let j = 1
 
         for (let i of myJsonPopuplarTrack.data) {
@@ -61,54 +57,6 @@ async function retrieveArtist() {
 }
 
 
-// async function mostPopular() {
-//     try {
-
-//         const popularTracksUrl = artistArray[0].data[0].artist.tracklist
-
-
-//         const popularTracksFetch = await fetch(popularTracksUrl)
-
-//         if (!popularTracksFetch.ok) {
-//             throw new Error("api Popular non scaricato")
-
-//         }
-
-//         const popularJson = await popularTracksFetch.json();
-//         console.log(popularJson)
-
-//         const artista = artistArray[0].data[0].artist.name
-
-//         riga.innerHTML = "";
-
-//         // Inseriamo nel documet un H1 con il nome dell'artista
-//         nomeArtista.innerHTML = "";
-
-//         nomeArtista.innerHTML = `${artista}`
-
-//         let j = 1
-//         for (let i of popularJson.data) {
-
-//             riga.innerHTML += `<ul class="list-group list-group-horizontal">
-//             <li class="list-group-item numero">${j} </li>
-//             <li class="list-group-item image"><img src="${i.album.cover
-//                 }"></li>
-//             <li class="list-group-item title">${i.title
-//                 }</li>
-//             <li class="list-group-item rank">${i.rank
-//                 }</li>
-//             <li class="list-group-item duration">${time(i.duration)}
-//                 </li>
-//           </ul>`
-//             j++
-//         }
-
-//     }
-
-//     catch (error) {
-//     console.error("fetch non eseguita")
-// }
-
 
 const time = (num) => {
     let minutes = Math.floor(num / 60)
@@ -118,8 +66,6 @@ const time = (num) => {
 
 
 window.onload = async () => {
-    // retrieveTracks()
-    // mostPopular();
     retrieveArtist()
 }
 
