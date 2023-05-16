@@ -6,6 +6,7 @@ const searchUrl = `${url}${urlId}`;
 const artistArray = [];
 const riga = document.querySelector(".row");
 console.log(artistArray)
+const nomeArtista = document.querySelector(".nomeArtista");
 
 
 async function retrieveSingleArtist() {
@@ -41,9 +42,14 @@ async function mostPopular() {
         const popularJson = await popularTracksFetch.json();
 
         console.log(popularJson)
-
+        const artista = artistArray[0].data[0].artist.name
+        console.log(artista);
         riga.innerHTML = "";
 
+// Inseriamo nel documet un H1 con il nome dell'artista
+        nomeArtista.innerHTML = "";
+
+        nomeArtista.innerHTML = `${artista}`
 
         let j = 1
         for (let i of popularJson.data) {
