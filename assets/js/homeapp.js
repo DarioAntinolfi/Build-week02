@@ -160,8 +160,8 @@ async function thirdSelection() {
 window.onload = () => {
     playlist();
     firstSelection();
-    // secondSelection();
-    // thirdSelection();
+    secondSelection();
+    thirdSelection();
 }
 
 const playlistNames = [
