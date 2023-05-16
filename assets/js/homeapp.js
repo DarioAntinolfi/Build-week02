@@ -9,6 +9,7 @@ const rigaSelection1 = document.getElementById("rigaSelection1");
 const rigaSelection2 = document.getElementById("rigaSelection2");
 const rigaSelection3 = document.getElementById("rigaSelection3");
 
+
 // async function retrieveDatabase() {
 //     try {
 //         const data = await fetch(url)
@@ -74,10 +75,10 @@ async function firstSelection() {
         for (let i of randomArray) {
             console.log(jsonArray[i].album.cover)
             rigaSelection1.innerHTML += `<div class="card-container col-2"><div class="card h-100">
-            <img src="${jsonArray[i].album.cover}" class="card-img-top" alt="album cover">
+            <a href="indexAlbum.html?id=${jsonArray[i].album.id}"><img src="${jsonArray[i].album.cover}" class="card-img-top" alt="album cover"></a>
             <div class="card-body">
-              <h5 class="card-title">${jsonArray[i].artist.name}</h5>
-              <p class="card-text">${jsonArray[i].album.title}</p>
+              <a href=""> <h5 class="card-title">${jsonArray[i].artist.name}</h5> </a>
+              <a href=""> <p class="card-text">${jsonArray[i].album.title}</p> </a> 
             </div>
             </div>
             </div>`
