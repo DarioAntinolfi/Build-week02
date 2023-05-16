@@ -89,6 +89,7 @@ async function firstSelection() {
 }
 
 // // SECONDA FUNZIONE ASINCRONA PER CREAZIONE ALTRI 5 TITOLI CASUALI DI ALBUM DI UN AUTORE
+
 async function secondSelection() {
     const urlSelection = "https://striveschool-api.herokuapp.com/api/deezer/search?q=maroon5"
 
@@ -105,6 +106,8 @@ async function secondSelection() {
         const myOggetto = myJson.data.length
         const randomArray = myRandomFunction(myOggetto);
 
+
+        // POPOLAZIONE CARD ALBUM
         rigaSelection2.innerHTML = "";
         for (let i of randomArray) {
             console.log(jsonArray[i].album.cover)
@@ -122,6 +125,7 @@ async function secondSelection() {
         console.error("fetch non eseguita")
     }
 }
+
 
 // // TERZA FUNZIONE ASINCRONA PER CREAZIONE ALTRI 5 TITOLI CASUALI DI ALBUM DI UN AUTORE
 async function thirdSelection() {
