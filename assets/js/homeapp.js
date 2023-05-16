@@ -10,29 +10,9 @@ const rigaSelection2 = document.getElementById("rigaSelection2");
 const rigaSelection3 = document.getElementById("rigaSelection3");
 
 
-// async function retrieveDatabase() {
-//     try {
-//         const data = await fetch(url)
-
-//         if (!data.ok) {
-//             throw new Error("api non scaricato")
-//         }
-
-//         const myJson = await data.json();
-
-//         console.log(myJson.data)
-//     }
-
-//     catch (error) {
-//         console.error("fetch non eseguita")
-//     }
-
-// }
-
-
 // LINK CON URL A QUERY DINAMICO
 search.addEventListener('click', () => {
-    search.setAttribute('href', `indexResult.html?q=${searchValue.value.toLowerCase()}`)
+    search.setAttribute('href', `indexSearchResult.html?q=${searchValue.value.toLowerCase()}`)
 
 })
 
@@ -54,16 +34,19 @@ function myRandomFunction(param) {
 // PRIMA FUNZIONE ASINCRONA PER CREAZIONE 5 ALBUM RANDOM 
 
 async function firstSelection() {
-    const urlSelection = "https://striveschool-api.herokuapp.com/api/deezer/search?q=zucchero"
+    const urlSelection = "https://striveschool-api.herokuapp.com/api/deezer/search?q=love"
 
     try {
         const data = await fetch(urlSelection)
 
         const myJson = await data.json();
 
+
         if (!data.ok) {
             throw new Error("api non scaricato")
         }
+
+        console.log(myJson)
 
         const jsonArray = myJson.data
         const myOggetto = myJson.data.length
@@ -77,8 +60,8 @@ async function firstSelection() {
             rigaSelection1.innerHTML += `<div class="card-container col-2"><div class="card h-100">
             <a href="indexAlbum.html?id=${jsonArray[i].album.id}"><img src="${jsonArray[i].album.cover}" class="card-img-top" alt="album cover"></a>
             <div class="card-body">
-              <a href=""> <h5 class="card-title">${jsonArray[i].artist.name}</h5> </a>
-              <a href=""> <p class="card-text">${jsonArray[i].album.title}</p> </a> 
+              <a href="indexArtisti.html?id=${jsonArray[i].artist.id}"> <h5 class="card-title">${jsonArray[i].artist.name}</h5> </a>
+              <a href="indexAlbum.html?id=${jsonArray[i].album.id}"> <p class="card-text">${jsonArray[i].album.title}</p></a> 
             </div>
             </div>
             </div>`
@@ -92,7 +75,7 @@ async function firstSelection() {
 // // SECONDA FUNZIONE ASINCRONA PER CREAZIONE ALTRI 5 TITOLI CASUALI DI ALBUM DI UN AUTORE
 
 async function secondSelection() {
-    const urlSelection = "https://striveschool-api.herokuapp.com/api/deezer/search?q=maroon5"
+    const urlSelection = "https://striveschool-api.herokuapp.com/api/deezer/search?q=life"
 
     try {
         const data = await fetch(urlSelection)
@@ -113,10 +96,10 @@ async function secondSelection() {
         for (let i of randomArray) {
             console.log(jsonArray[i].album.cover)
             rigaSelection2.innerHTML += `<div class="card-container col-2"><div class="card h-100">
-            <img src="${jsonArray[i].album.cover}" class="card-img-top" alt="album cover">
+            <a href="indexAlbum.html?id=${jsonArray[i].album.id}"><img src="${jsonArray[i].album.cover}" class="card-img-top" alt="album cover"></a>
             <div class="card-body">
-              <h5 class="card-title">${jsonArray[i].artist.name}</h5>
-              <p class="card-text">${jsonArray[i].album.title}</p>
+              <a href="indexArtisti.html?id=${jsonArray[i].artist.id}"> <h5 class="card-title">${jsonArray[i].artist.name}</h5> </a>
+              <a href="indexAlbum.html?id=${jsonArray[i].album.id}"> <p class="card-text">${jsonArray[i].album.title}</p></a> 
             </div>
             </div>
             </div>`
@@ -130,7 +113,7 @@ async function secondSelection() {
 
 // // TERZA FUNZIONE ASINCRONA PER CREAZIONE ALTRI 5 TITOLI CASUALI DI ALBUM DI UN AUTORE
 async function thirdSelection() {
-    const urlSelection = "https://striveschool-api.herokuapp.com/api/deezer/search?q=,muse"
+    const urlSelection = "https://striveschool-api.herokuapp.com/api/deezer/search?q=woman"
 
     try {
         const data = await fetch(urlSelection)
@@ -148,10 +131,10 @@ async function thirdSelection() {
         for (let i of randomArray) {
             console.log(jsonArray[i].album.cover)
             rigaSelection3.innerHTML += `<div class="card-container col-2"><div class="card h-100">
-            <img src="${jsonArray[i].album.cover}" class="card-img-top" alt="album cover">
+            <a href="indexAlbum.html?id=${jsonArray[i].album.id}"><img src="${jsonArray[i].album.cover}" class="card-img-top" alt="album cover"></a>
             <div class="card-body">
-              <h5 class="card-title">${jsonArray[i].artist.name}</h5>
-              <p class="card-text">${jsonArray[i].album.title}</p>
+              <a href="indexArtisti.html?id=${jsonArray[i].artist.id}"> <h5 class="card-title">${jsonArray[i].artist.name}</h5> </a>
+              <a href="indexAlbum.html?id=${jsonArray[i].album.id}"> <p class="card-text">${jsonArray[i].album.title}</p></a> 
             </div>
             </div>
             </div>`
