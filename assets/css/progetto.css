@@ -1,88 +1,147 @@
-svg, p, h2, h4{
-    color: white;
+svg,
+p,
+h2,
+h4 {
+  color: white;
 }
 
-hr{
-    border-color: white;
+hr {
+  border-color: white;
 }
 
-.imgAmici{
-    border-radius: 100%;
+.imgAmici {
+  border-radius: 100%;
 }
 
-#divSinistra{
-    margin-left: 20px;
+#divSinistra {
+  margin-left: 20px;
 }
 
-.testoPiccolo{
-    font-size: xx-small;
-    margin-bottom: 5px;
+.testoPiccolo {
+  font-size: xx-small;
+  margin-bottom: 5px;
 }
 
-a{
-    text-decoration: none;
-    color: white;
+a {
+  text-decoration: none;
+  color: white;
 }
 
-a:visited{
-    text-decoration: none;
-    color: white;
+a:visited {
+  text-decoration: none;
+  color: white;
 }
 
-.imgDestra{
-    border-radius: 100%;
-    width: 25px;
-    margin: 0.5rem;
+.imgDestra {
+  border-radius: 100%;
+  width: 25px;
+  margin: 0.5rem;
 }
 
-.textDestra{
-    color:white;
-    margin: 0;
-    padding: 0;
+.textDestra {
+  color: white;
+  margin: 0;
+  padding: 0;
 }
 
-.bg-black{
-    background-color: black;
+.bg-black {
+  background-color: black;
 }
 
-#utente{
-    border-radius: 100%;
-    width: 20px;
-    margin: 0;
+#utente {
+  border-radius: 100%;
+  width: 20px;
+  margin: 0;
 }
 
-#contenitore-utente{
-    border-radius: 20px;
-    background-color: black;
-    padding-right: 5px;
+#contenitore-utente {
+  border-radius: 20px;
+  background-color: black;
+  padding-right: 5px;
 }
 
-span{
-    color:white;
+span {
+  color: white;
 }
 
-#hero-img{
-    width: 100%;
+#hero-img {
+  width: 100%;
 }
 
-.adapt-btn{
-    border-radius: 30px;
-    padding-left: 25px;
-    padding-right: 25px;
-    margin-right: 10px;
+.adapt-btn {
+  border-radius: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-right: 10px;
 }
 
-.img-buonasera{
-    width: 65px;
-    height: 65px;
-    padding: 0;
-    margin: 0;
+.img-buonasera {
+  width: 65px;
+  height: 65px;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px 0 0 5px;
 }
 
-.bg-gray{
-    background-color: gray;
+.bg-gray {
+  background-color: gray;
 }
 
-.text-buonasera{
-    margin-left: 10px;
+.text-buonasera {
+  margin-left: 10px;
+}
+
+.titoloCard {
+  font-size: medium;
+  color: white;
+}
+
+.testoCard {
+  font-size: small;
+}
+
+.divBuonaseraRounded {
+  border-radius: 5px;
+}
+
+#immagineFooter {
+  width: 20%;
+  border-radius: 5px;
+}
+
+#pTestFooter {
+  color: black;
+  margin: 0;
+}
+
+#barraVolume {
+  background: linear-gradient(
+    to right,
+    #ffffff 0%,
+    #ffffff 40%,
+    #ffffff 40%,
+    #ffffff 100%
+  );
+  border-radius: 8px;
+  height: 5px;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+#divBarraVolume {
+  margin-bottom: 6px;
+}
+
+#footerSticky {
+  position: sticky;
+  bottom: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .divBuonaseraRounded {
+    background-color: transparent;
+  }
+  .cardFlex img {
+    width: 50%;
+  }
 }
