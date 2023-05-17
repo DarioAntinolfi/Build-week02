@@ -4,17 +4,17 @@ const url = "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen"
 const arrayData = []
 const search = document.getElementById("search");
 const searchValue = document.querySelector(".search");
-const riga = document.querySelector(".row");
+const arrayLaterale = document.querySelector(".arrayLaterale");
 const rigaSelection1 = document.getElementById("rigaSelection1");
 const rigaSelection2 = document.getElementById("rigaSelection2");
 const rigaSelection3 = document.getElementById("rigaSelection3");
 
 
 // LINK CON URL A QUERY DINAMICO
-search.addEventListener('click', () => {
-    search.setAttribute('href', `indexSearchResult.html?q=${searchValue.value.toLowerCase()}`)
+// search.addEventListener('click', () => {
+//     search.setAttribute('href', `indexSearchResult.html?q=${searchValue.value.toLowerCase()}`)
 
-})
+// })
 
 // CREAZIONE RANDOM ARRAY PER SELEZIONE CASUALE ALBUM
 
@@ -147,9 +147,9 @@ async function thirdSelection() {
 
 window.onload = () => {
     playlist();
-    firstSelection();
-    secondSelection();
-    thirdSelection();
+    // firstSelection();
+    // secondSelection();
+    // thirdSelection();
 }
 
 const playlistNames = [
@@ -188,9 +188,9 @@ const playlistNames = [
 ];
 
 const playlist = () => {
-    riga.innerHTML = ""
+    arrayLaterale.innerHTML = ""
     for (let i of playlistNames) {
-        riga.innerHTML += `<div class="playList-wrapper col-4">${i}</div>`
+        arrayLaterale.innerHTML += `<div class="playList-wrapper">${i}</div>`
     }
 }
 
