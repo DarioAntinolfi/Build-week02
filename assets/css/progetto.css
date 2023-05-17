@@ -104,7 +104,12 @@ span {
   font-size: small;
 }
 
-.divBuonaseraRounded {
+.containerBuonaseraRounded {
+  width: 30%;
+}
+
+.divBuonaseraRounded,
+.containerBuonaseraRounded {
   border-radius: 5px;
 }
 
@@ -139,7 +144,7 @@ span {
   border-radius: 8px;
   height: 5px;
   outline: none;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
 }
 
 #divBarraVolume {
@@ -172,9 +177,10 @@ span {
 }
 
 @media screen and (max-width: 992px) {
-  .divBuonaseraRounded {
-    background-color: transparent;
+  .mainContainer {
+    padding: 3rem 0;
   }
+
   .cardFlex img {
     width: 50%;
     margin: 0%;
@@ -210,23 +216,19 @@ span {
     margin: 0;
     padding-right: 15px;
   }
+
+  .card-img {
+    width: 200px;
+  }
 }
 
-.footerPlay {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
+@media screen and (max-width: 768px) {
+  .containerBuonaseraRounded {
+    width: 48%;
+    background-color: transparent;
+  }
 
-.riga3 {
-  margin-bottom: 14%;
-}
-
-.divVolumeFooter {
-  display: flex;
-  margin-left: 5%;
-}
-
-.divBarraPlay {
-  margin-left: -1%;
+  .mainContainer {
+    padding: 3rem 0;
+  }
 }
