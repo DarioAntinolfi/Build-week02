@@ -106,6 +106,7 @@ span {
 
 .containerBuonaseraRounded {
   width: 30%;
+  background-color: #2a2a2a;
 }
 
 .divBuonaseraRounded,
@@ -162,6 +163,7 @@ span {
   padding: 15px;
   padding-bottom: 20px;
   border-radius: 10px;
+  background-color: #161616;
 }
 
 .cardFlex img {
@@ -174,6 +176,23 @@ span {
 
 .cardFlex p {
   margin: 0%;
+}
+
+.nascondi-annunci {
+  background-color: #21252945;
+  margin: 1.5%;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 30px;
+  font-size: x-small;
+}
+
+.coloreBodyCentrale {
+  background-color: #212121;
+}
+
+.barraVolumeFooter {
+  margin-left: 10%;
 }
 
 @media screen and (max-width: 992px) {
@@ -195,7 +214,7 @@ span {
     padding: 5%;
   }
   .cardFlex p {
-    font-size: 50px;
+    font-size: 4rem;
     margin-left: 5%;
   }
 
@@ -212,7 +231,7 @@ span {
   }
 
   .play p {
-    font-size: 15px;
+    font-size: 1rem;
     margin: 0;
     padding-right: 15px;
   }
@@ -220,15 +239,28 @@ span {
   .card-img {
     width: 200px;
   }
-}
-
-@media screen and (max-width: 768px) {
   .containerBuonaseraRounded {
     width: 48%;
     background-color: transparent;
   }
 
-  .mainContainer {
-    padding: 3rem 0;
+  .buonaseraContainer h4 {
+    font-size: 2em;
+  }
+
+  .buonaseraContainer p {
+    margin-left: 5%;
+    font-size: 1em;
+  }
+
+  @media screen and (max-width: 768px) {
+    .containerBuonaseraRounded {
+      width: 48%;
+      background-color: transparent;
+    }
+
+    .mainContainer {
+      padding: 3rem 0;
+    }
   }
 }
