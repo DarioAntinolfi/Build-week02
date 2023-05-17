@@ -5,6 +5,10 @@ h4 {
   color: white;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 hr {
   border-color: white;
 }
@@ -116,12 +120,11 @@ span {
 
 .divBarraMobile {
   padding-top: 1.5%;
-  background: rgb(0, 0, 0);
   background: linear-gradient(
-    0deg,
+    to top,
     rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(46, 45, 45, 0.3960434515603116) 90%
+    rgba(0, 0, 0, 1) 25%,
+    rgba(0, 0, 0, 0) 100%
   );
 }
 
@@ -148,11 +151,56 @@ span {
   bottom: 0;
 }
 
+.cardFlex {
+  width: 20%;
+  background-color: gray;
+  padding: 15px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+}
+
+.cardFlex img {
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 5%;
+  margin-top: 0%;
+  border-radius: 10px;
+}
+
+.cardFlex p {
+  margin: 0%;
+}
+
 @media screen and (max-width: 992px) {
   .divBuonaseraRounded {
     background-color: transparent;
   }
   .cardFlex img {
     width: 50%;
+    margin: 0%;
+    border-radius: 0;
+  }
+  .cardFlex {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 5%;
+  }
+  .cardFlex p {
+    font-size: 50px;
+    margin-left: 5%;
+  }
+
+  .cardFlex h5 {
+    margin-left: 5%;
+  }
+
+  .divP {
+    width: 50%;
+  }
+
+  .iconeCard {
+    margin-top: 5%;
   }
 }
