@@ -5,7 +5,7 @@ const urlArtist = new URLSearchParams(location.search).get("art");
 const riga = document.querySelector(".rigaAlbum");
 const dettagliAlbum = document.querySelector(".dettagliAlbum");
 const titoloAlbum = document.querySelector(".titoloAlbum");
-
+const playerBar = document.querySelector(".player");
 
 
 async function retrieveSingleAlbum() {
@@ -18,7 +18,6 @@ async function retrieveSingleAlbum() {
 
         const jsonAlbum = await data.json();
         const tracksArray = jsonAlbum.tracks.data;
-        console.log(tracksArray)
 
         riga.innerHTML = "";
         titoloAlbum.innerHTML = "";
@@ -39,7 +38,6 @@ async function retrieveSingleAlbum() {
 
         let j = 1
         for (let i of tracksArray) {
-            console.log(i)
 
             riga.innerHTML += `<ul class="list-group list-group-horizontal" >
                 <li class="list-group-item numero">${j} </li>
@@ -72,4 +70,14 @@ const time = (num) => {
 
 window.onload = () => {
     retrieveSingleAlbum()
+    playerCheck();
+}
+
+const playerCheck = () => {
+    const player = localStorage.getItem("display");
+    if (player) {
+        playerBar.classList.remove("d-none");
+        playerBar.classList.add("d-block");
+
+    }
 }

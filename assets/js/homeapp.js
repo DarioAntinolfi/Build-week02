@@ -4,21 +4,13 @@ const url = "https://striveschool-api.herokuapp.com/api/deezer/search?q=queen"
 const arrayData = []
 const search = document.getElementById("search");
 const searchValue = document.querySelector(".search");
+const heroContainer = document.querySelector(".heroContainer");
 const arrayLaterale = document.querySelector(".arrayLaterale");
 const rigaSelection1 = document.getElementById("rigaSelection1");
 const rigaSelection2 = document.getElementById("rigaSelection2");
 const rigaSelection3 = document.getElementById("rigaSelection3");
+const playerBar = document.querySelector(".player");
 
-console.log(rigaSelection2)
-
-
-// LINK CON URL A QUERY DINAMICO
-// search.addEventListener('click', () => {
-//     search.setAttribute('href', `indexSearchResult.html?q=${searchValue.value.toLowerCase()}`)
-
-// })
-
-// CREAZIONE RANDOM ARRAY PER SELEZIONE CASUALE ALBUM
 
 function myRandomFunction(param) {
   let i = 0;
@@ -30,6 +22,98 @@ function myRandomFunction(param) {
       i++
     }
   } return counterArray
+}
+// ${heroUrlJson.data[i].album.cover_big},${heroUrlJson.data[i].album.title},${heroUrlJson.data[i].artist.name}
+function player() {
+  // evt.preventDefault();
+
+  playerBar.classList.remove("d-none");
+  playerBar.classList.add("d-block");
+  displayOn = true
+  localStorage.setItem("display", displayOn)
+
+
+  // playerBar.innerHTML = `<div class="col-4 d-flex coloreBodyCentrale m-3 me-0">
+  //   <img id="immagineFooter" src="${image}" alt="" />
+  //   <div class="align-self-center ms-2">
+  //     <h6 class="m-0 text-white">${album}</h6>
+  //     <p class="text-white" id="pTestFooter">${artist}</p>
+  //   </div>
+  //   <div class="align-self-center ms-2">
+  //     &nbsp;&nbsp;&nbsp;&nbsp;
+  //     <svg
+  //       xmlns="http://www.w3.org/2000/svg"
+  //       width="16"
+  //       height="16"
+  //       fill="currentColor"
+  //       class="bi bi-heart"
+  //       viewBox="0 0 16 16"
+  //     >
+  //       <path
+  //         d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+  //       />
+  //     </svg>
+  //   </div>
+  // </div>`
+}
+
+async function heroSelection() {
+  try {
+    const heroURL = await fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=motivaational")
+
+    if (!heroURL.ok) {
+      throw new Error(" tech non andata a buon fine")
+    }
+
+    const heroUrlJson = await heroURL.json();
+    let i = Math.floor(Math.random() * heroUrlJson.data.length)
+
+    heroContainer.innerHTML = "";
+    heroContainer.innerHTML = `<div
+    id="cont-img-hero"
+    class="d-flex align-items-center py-2 col-3 me-4"
+  >
+    <img
+      id="hero-img"
+      src="${heroUrlJson.data[i].album.cover_big}"
+      alt="cover-picture"
+    />
+  </div>
+  <span
+    class="text-secondary position-absolute end-0 top-0 nascondi-annunci"
+    >NASCONDI ANNUNCI</span
+  >
+  <div class="py-1 d-flex flex-column justify-content-between heroText-container">
+    <div class="d-flex justify-content-between">
+      <p>${heroUrlJson.data[i].album.type.toUpperCase()}</p>
+    </div>
+    <h2>${heroUrlJson.data[i].album.title}</h2>
+    <p>${heroUrlJson.data[i].artist.name}</p>
+    <p>Ascolta i nuovi singoli di ${heroUrlJson.data[i].artist.name}</p>
+    <div>
+      <button class="btn btn-success text-dark adapt-btn" type="button" onclick="player()">Play</button>
+      <span class="btn btn-secondary bg-black adapt-btn">Salva</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-three-dots"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+        />
+      </svg>
+    </div>
+  </div>`
+
+
+
+  }
+  catch (error) {
+    console.error(error)
+  }
 }
 
 
@@ -55,11 +139,12 @@ async function firstSelection() {
 
     // POPOLAZIONE CARD ALBUM
     rigaSelection1.innerHTML = "";
+    let j = 1
     for (let i of randomArray) {
 
-      rigaSelection1.innerHTML += `<div class="cardFlex mb-4">
-      <img src="${jsonArray[i].album.cover}" onclick="location.assign('indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}')" alt="album cover" class="card-img">
-
+      rigaSelection1.innerHTML += `<div class="cardFlex mb-4" id="card${j}"><div class="image-wrapper">
+                        <img src="${jsonArray[i].album.cover_big}" alt="album cover" class="card-img object-fit-cover img-fluid" onclick="location.assign ('indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}')">
+                        </div>
                         <div class="p-1 divP">
                           <a href="indexArtisti.html?id=${jsonArray[i].artist.id}"> <h5 class="titoloCard">${jsonArray[i].artist.name}</h5> </a>
                           <a href="indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}"> <p class="testoCard">${jsonArray[i].album.title}</p></a> 
@@ -119,7 +204,7 @@ async function firstSelection() {
                   </div>
                     
                         </div>`
-
+      j++
 
     }
 
@@ -145,15 +230,15 @@ async function secondSelection() {
     const jsonArray = myJson.data
     const myOggetto = myJson.data.length
     const randomArray = myRandomFunction(myOggetto);
-    console.log(myJson)
 
     // POPOLAZIONE CARD ALBUM
     rigaSelection2.innerHTML = "";
+    j = 1
     for (let i of randomArray) {
 
-      rigaSelection2.innerHTML += `<div class="cardFlex mb-4">
-        <a href="indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}"><img src="${jsonArray[i].album.cover}" alt="album cover"></a>
-        <div class="p-1 divP">
+      rigaSelection2.innerHTML += `<div class="cardFlex mb-4" id="card${j}"><div class="image-wrapper">
+      <img src="${jsonArray[i].album.cover_big}" alt="album cover" class="card-img object-fit-cover img-fluid" onclick="location.assign ('indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}')">
+        </div><div class="p-1 divP">
           <a href="indexArtisti.html?id=${jsonArray[i].artist.id}"> <h5 class="titoloCard">${jsonArray[i].artist.name}</h5> </a>
           <a href="indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}"> <p class="testoCard">${jsonArray[i].album.title}</p></a> 
         </div>
@@ -213,6 +298,8 @@ async function secondSelection() {
     
         </div>`
 
+      j++
+
     }
 
   } catch (error) {
@@ -238,11 +325,12 @@ async function thirdSelection() {
     const randomArray = myRandomFunction(myOggetto);
 
     rigaSelection3.innerHTML = "";
+    j = 1
     for (let i of randomArray) {
 
-      rigaSelection3.innerHTML += `<div class="cardFlex mb-4">
-                        <a href="indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}"><img src="${jsonArray[i].album.cover}" alt="album cover"></a>
-                        <div class="p-1 divP">
+      rigaSelection3.innerHTML += `<div class="cardFlex mb-4" id="card${j}"><div class="image-wrapper">
+      <img src="${jsonArray[i].album.cover_big}" alt="album cover" class="card-img object-fit-cover img-fluid" onclick="location.assign ('indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}')">
+                        </div><div class="p-1 divP">
                           <a href="indexArtisti.html?id=${jsonArray[i].artist.id}"> <h5 class="titoloCard">${jsonArray[i].artist.name}</h5> </a>
                           <a href="indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}"> <p class="testoCard">${jsonArray[i].album.title}</p></a> 
                         </div>
@@ -301,6 +389,7 @@ async function thirdSelection() {
                   </div>
                     
                         </div>`
+      j++
 
     }
 
@@ -314,6 +403,7 @@ window.onload = () => {
   firstSelection();
   secondSelection();
   thirdSelection();
+  heroSelection();
 }
 
 const playlistNames = [
