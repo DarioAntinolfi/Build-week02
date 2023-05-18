@@ -142,7 +142,7 @@ async function firstSelection() {
     let j = 1
     for (let i of randomArray) {
 
-      rigaSelection1.innerHTML += `<div class="cardFlex mb-4" id="card${j}"><div class="image-wrapper">
+      rigaSelection1.innerHTML += `<div class="cardFlex mb-4 card${j}"><div class="image-wrapper">
                         <img src="${jsonArray[i].album.cover_big}" alt="album cover" class="card-img object-fit-cover img-fluid" onclick="location.assign ('indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}')">
                         </div>
                         <div class="p-1 divP">
@@ -152,7 +152,7 @@ async function firstSelection() {
                         <div
                     class="d-flex justify-content-between w-100 align-items-center"
                   >
-                    <div class="d-lg-none">
+                    <div class="d-md-none">
 
                  <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -182,7 +182,7 @@ async function firstSelection() {
               
                 </div>
                 
-                 <div class="d-lg-none play">
+                 <div class="d-md-none play">
                       <p class="align-self-center">Placeholder</p>
                       <svg
                         id="bottonePlay"
@@ -236,7 +236,7 @@ async function secondSelection() {
     j = 1
     for (let i of randomArray) {
 
-      rigaSelection2.innerHTML += `<div class="cardFlex mb-4" id="card${j}"><div class="image-wrapper">
+      rigaSelection2.innerHTML += `<div class="cardFlex mb-4 card${j}"><div class="image-wrapper">
       <img src="${jsonArray[i].album.cover_big}" alt="album cover" class="card-img object-fit-cover img-fluid" onclick="location.assign ('indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}')">
         </div><div class="p-1 divP">
           <a href="indexArtisti.html?id=${jsonArray[i].artist.id}"> <h5 class="titoloCard">${jsonArray[i].artist.name}</h5> </a>
@@ -245,7 +245,7 @@ async function secondSelection() {
         <div
     class="d-flex justify-content-between w-100 align-items-center"
   >
-    <div class="d-lg-none">
+    <div class="d-md-none">
 
  <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -275,7 +275,7 @@ async function secondSelection() {
 
 </div>
 
- <div class="d-lg-none play">
+ <div class="d-md-none play">
       <p class="align-self-center">Placeholder</p>
       <svg
         id="bottonePlay"
@@ -328,7 +328,7 @@ async function thirdSelection() {
     j = 1
     for (let i of randomArray) {
 
-      rigaSelection3.innerHTML += `<div class="cardFlex mb-4" id="card${j}"><div class="image-wrapper">
+      rigaSelection3.innerHTML += `<div class="cardFlex mb-4 card${j}"><div class="image-wrapper">
       <img src="${jsonArray[i].album.cover_big}" alt="album cover" class="card-img object-fit-cover img-fluid" onclick="location.assign ('indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}')">
                         </div><div class="p-1 divP">
                           <a href="indexArtisti.html?id=${jsonArray[i].artist.id}"> <h5 class="titoloCard">${jsonArray[i].artist.name}</h5> </a>
@@ -337,7 +337,7 @@ async function thirdSelection() {
                         <div
                     class="d-flex justify-content-between w-100 align-items-center"
                   >
-                    <div class="d-lg-none">
+                    <div class="d-md-none">
 
                  <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -367,7 +367,7 @@ async function thirdSelection() {
               
                 </div>
                 
-                 <div class="d-lg-none play">
+                 <div class="d-md-none play">
                       <p class="align-self-center">Placeholder</p>
                       <svg
                         id="bottonePlay"
