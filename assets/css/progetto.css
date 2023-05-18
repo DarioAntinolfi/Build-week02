@@ -111,10 +111,6 @@ a:visited {
   border-radius: 5px;
 }
 
-#immagineFooter {
-  width: 20%;
-  border-radius: 5px;
-}
 
 #pTestFooter {
   color: black;
@@ -194,6 +190,21 @@ a:visited {
 
 .arrayLaterale {
   color: rgb(196, 196, 196);
+}
+
+.imgFooter-wrapper {
+  width:15%;
+  min-width: 75px;
+  margin-right: 1rem;
+}
+
+.footerText-wrapper {
+  width:50%;
+}
+
+#immagineFooter {
+  width: 100%;
+  border-radius: 5px;
 }
 
 /*progress bar*/
@@ -359,3 +370,21 @@ a:visited {
 
 
 }
+
+
+  
+
+  .imgFooter-wrapper {
+    width:15%;
+    min-width: 75px;
+    margin-right: 1rem;
+  }
+  
+  .footerText-wrapper {
+    width:50%;
+  }
+
+  #immagineFooter {
+    width: 100%;
+    border-radius: 5px;
+  }

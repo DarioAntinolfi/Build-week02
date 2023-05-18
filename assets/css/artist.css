@@ -32,7 +32,7 @@
 
 .divArtistaHero {
   position: absolute;
-  bottom: 0;
+  bottom:0;
   left: 30px;
   z-index: 1;
 }
@@ -104,4 +104,19 @@
 .visualizzaAltro {
   font-size: 0.8rem;
   padding-left: 0.8rem;
+}
+
+.imgFooter-rapper {
+    width: 15%;
+    min-width: 75px;
+    margin-right: 1rem;
+}
+
+.footerText-wrapper {
+    width: 50%;
+}
+
+#immagineFooter {
+    width:100%;
+    border-radius: 5px;
 }
