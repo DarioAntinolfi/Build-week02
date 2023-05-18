@@ -52,7 +52,7 @@ async function retrieveArtist() {
             j++;
         }
         sfondoSezioneCentrale.innerHTML += `<img class="imgAlbumCover" src="${myJsonArtist.picture_big}" alt="Album Cover">`;
-        //${myJsonArtist.picture_big}
+
     }
     catch (error) {
         console.error("fetch non andata a buon fine")
