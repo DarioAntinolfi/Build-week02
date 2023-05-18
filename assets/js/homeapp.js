@@ -24,7 +24,7 @@ function myRandomFunction(param) {
   } return counterArray
 }
 // ${heroUrlJson.data[i].album.cover_big},${heroUrlJson.data[i].album.title},${heroUrlJson.data[i].artist.name}
-function player() {
+function player(image, album, artista) {
   // evt.preventDefault();
 
   playerBar.classList.remove("d-none");
@@ -33,28 +33,28 @@ function player() {
   localStorage.setItem("display", displayOn)
 
 
-  // playerBar.innerHTML = `<div class="col-4 d-flex coloreBodyCentrale m-3 me-0">
-  //   <img id="immagineFooter" src="${image}" alt="" />
-  //   <div class="align-self-center ms-2">
-  //     <h6 class="m-0 text-white">${album}</h6>
-  //     <p class="text-white" id="pTestFooter">${artist}</p>
-  //   </div>
-  //   <div class="align-self-center ms-2">
-  //     &nbsp;&nbsp;&nbsp;&nbsp;
-  //     <svg
-  //       xmlns="http://www.w3.org/2000/svg"
-  //       width="16"
-  //       height="16"
-  //       fill="currentColor"
-  //       class="bi bi-heart"
-  //       viewBox="0 0 16 16"
-  //     >
-  //       <path
-  //         d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
-  //       />
-  //     </svg>
-  //   </div>
-  // </div>`
+  playerBar.innerHTML = `<div class="col-4 d-flex coloreBodyCentrale m-3 me-0">
+    <img id="immagineFooter" src="${image}" alt="" />
+    <div class="align-self-center ms-2">
+      <h6 class="m-0 text-white">${album}</h6>
+      <p class="text-white" id="pTestFooter">${artista}</p>
+    </div>
+    <div class="align-self-center ms-2">
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-heart"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+        />
+      </svg>
+    </div>
+  </div>`
 }
 
 async function heroSelection() {
@@ -91,7 +91,7 @@ async function heroSelection() {
     <p>${heroUrlJson.data[i].artist.name}</p>
     <p>Ascolta i nuovi singoli di ${heroUrlJson.data[i].artist.name}</p>
     <div>
-      <button class="btn btn-success text-dark adapt-btn" type="button" onclick="player()">Play</button>
+      <button class="btn btn-success text-dark adapt-btn" type="button" onclick="player('${heroUrlJson.data[i].album.cover_big}','${heroUrlJson.data[i].album.title}','${heroUrlJson.data[i].artist.name}' )">Play</button>
       <span class="btn btn-secondary bg-black adapt-btn">Salva</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
