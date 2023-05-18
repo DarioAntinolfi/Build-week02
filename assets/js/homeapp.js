@@ -368,11 +368,11 @@ async function firstSelection() {
     for (let i of randomArray) {
 
       rigaSelection1.innerHTML += `<div class="cardFlex mb-4 card${j}"><div class="image-wrapper">
-                        <img src="${jsonArray[i].album.cover_big}" alt="album cover" class="card-img object-fit-cover img-fluid" onclick="location.assign ('indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}')">
+                        <img src="${jsonArray[i].album.cover_big}" alt="album cover" class="card-img object-fit-cover img-fluid" onclick="location.assign ('album.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}')">
                         </div>
                         <div class="p-1 divP">
                           <a href="artista.html?id=${jsonArray[i].artist.id}"> <h5 class="titoloCard">${jsonArray[i].artist.name}</h5> </a>
-                          <a href="indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}"> <p class="testoCard">${jsonArray[i].album.title}</p></a> 
+                          <a href="album.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}"> <p class="testoCard">${jsonArray[i].album.title}</p></a> 
                         </div>
                         <div
                     class="d-flex justify-content-between w-100 align-items-center"
@@ -462,10 +462,10 @@ async function secondSelection() {
     for (let i of randomArray) {
 
       rigaSelection2.innerHTML += `<div class="cardFlex mb-4 card${j}"><div class="image-wrapper">
-      <img src="${jsonArray[i].album.cover_big}" alt="album cover" class="card-img object-fit-cover img-fluid" onclick="location.assign ('indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}')">
+      <img src="${jsonArray[i].album.cover_big}" alt="album cover" class="card-img object-fit-cover img-fluid" onclick="location.assign ('album.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}')">
         </div><div class="p-1 divP">
-          <a href="indexArtisti.html?id=${jsonArray[i].artist.id}"> <h5 class="titoloCard">${jsonArray[i].artist.name}</h5> </a>
-          <a href="indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}"> <p class="testoCard">${jsonArray[i].album.title}</p></a> 
+          <a href="artista.html?id=${jsonArray[i].artist.id}"> <h5 class="titoloCard">${jsonArray[i].artist.name}</h5> </a>
+          <a href="album.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}"> <p class="testoCard">${jsonArray[i].album.title}</p></a> 
         </div>
         <div
     class="d-flex justify-content-between w-100 align-items-center"
@@ -554,10 +554,10 @@ async function thirdSelection() {
     for (let i of randomArray) {
 
       rigaSelection3.innerHTML += `<div class="cardFlex mb-4 card${j}"><div class="image-wrapper">
-      <img src="${jsonArray[i].album.cover_big}" alt="album cover" class="card-img object-fit-cover img-fluid" onclick="location.assign ('indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}')">
+      <img src="${jsonArray[i].album.cover_big}" alt="album cover" class="card-img object-fit-cover img-fluid" onclick="location.assign ('album.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}')">
                         </div><div class="p-1 divP">
-                          <a href="indexArtisti.html?id=${jsonArray[i].artist.id}"> <h5 class="titoloCard">${jsonArray[i].artist.name}</h5> </a>
-                          <a href="indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}"> <p class="testoCard">${jsonArray[i].album.title}</p></a> 
+                          <a href="artista.html?id=${jsonArray[i].artist.id}"> <h5 class="titoloCard">${jsonArray[i].artist.name}</h5> </a>
+                          <a href="album.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}"> <p class="testoCard">${jsonArray[i].album.title}</p></a> 
                         </div>
                         <div
                     class="d-flex justify-content-between w-100 align-items-center"
