@@ -102,8 +102,8 @@
             <!-- Mettiamo il seguente div per poter dare lo stesso sfondo a tutto quel che sta nel header della sezione centrale-->
             <div class="sfondoSezioneCentrale">
               <!--frecce-->
-              <div class="m-2 justify-content-between d-none d-lg-flex">
-                <div id="freccette">
+              <div id="freccette" class="m-2 justify-content-between d-none d-lg-flex">
+                <div>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
@@ -133,17 +133,15 @@
               <!--/frecce-->
               <!--Hero-->
               <div class="row my-4 ">
-                <div class="col-12 py-1 ">
+                <div class="col-12 py-1 divArtistaHero">
                   <!-- Il display:flex direction:column justify-content:end dovrebbe stare qui per allineare il testo partendo dal basso, ma non funziona. Ci seve essere qualche cosa che sovrascrive 🤔 -->
-                  <div class="d-flex mb-1">
-                    <span class="me-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-patch-check-fill verifiedIcon" viewBox="0 0 16 16">
-                        <path
-                          d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
-                      </svg>
-                    </span>
-                    <span>Artista verificato</span>
+                  <div class="d-flex align-items-center">
+                    <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="cyan"
+                      class="bi bi-patch-check-fill verifiedIcon" viewBox="0 0 16 16">
+                      <path
+                        d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
+                    </svg>
+                    <span class="text-white">Artista verificato</span>
                   </div>
                   <h2 class="nomeArtista"></h2>
                   <p class="numeroFan"></p>

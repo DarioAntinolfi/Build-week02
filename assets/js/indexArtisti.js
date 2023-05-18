@@ -51,7 +51,7 @@ async function retrieveArtist() {
         </div>`
             j++;
         }
-        sfondoSezioneCentrale.innerHTML = `<img src="${myJsonArtist.picture_big}" class="imgAlbumCover" alt="Album Cover">`;
+        sfondoSezioneCentrale.innerHTML += `<img class="imgAlbumCover" src="${myJsonArtist.picture_big}" alt="Album Cover">`;
         //${myJsonArtist.picture_big}
     }
     catch (error) {
