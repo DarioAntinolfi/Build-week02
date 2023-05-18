@@ -29,25 +29,25 @@
     border: 0;
 }
 
-.numero{
-    flex-grow: 1;
+/* .numero{
+    flex-basis: 1;
 }
 
 .image {
-    flex-grow: 1;
+    flex-basis: 2;
 }
 
 .title {
-    flex-grow: 10;
+    flex-basis: 3;
 }
 
 .rank {
-    flex-grow: 5;
+    flex-basis: 2;
 }
 
 .duration {
-    flex-grow: 1;
-}
+    flex-basis: 2;
+} */
 
 .imgBraniCheTiPiacciono {
     border-radius: 50%;
