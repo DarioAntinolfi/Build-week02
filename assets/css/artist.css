@@ -76,19 +76,24 @@
   border: 0;
 }
 
+/* .numero{
+    flex-basis: 1;
 .numero {
   flex-grow: 1;
 }
 
 .image {
+    flex-basis: 2;
   flex-grow: 1;
 }
 
 .title {
+    flex-basis: 3;
   flex-grow: 10;
 }
 
 .rank {
+    flex-basis: 2;
   flex-grow: 5;
 }
 
