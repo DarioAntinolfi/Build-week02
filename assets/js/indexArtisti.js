@@ -15,7 +15,7 @@ const playerBar = document.querySelector(".player");
 
 const playerCheck = () => {
     const player = localStorage.getItem("display");
-    if (player) {
+    if (player === true) {
         playerBar.classList.remove("d-none");
         playerBar.classList.add("d-block");
     }
@@ -33,8 +33,8 @@ function player(image, album, artista) {
 
     playerBar.classList.remove("d-none");
     playerBar.classList.add("d-block");
-    displayOn = true
-    localStorage.setItem("display", displayOn)
+    displayOn = true;
+    localStorage.setItem("display", displayOn);
 
 
     playerBar.innerHTML = `<div class="croce d-flex flex-row-reverse">
@@ -388,7 +388,8 @@ const playlist = () => {
 
 
 window.onload = () => {
+    playerCheck();
     retrieveArtist()
     playlist()
-    playerCheck();
+
 }
