@@ -32,6 +32,7 @@ function player() {
   displayOn = true
   localStorage.setItem("display", displayOn)
 
+
   // playerBar.innerHTML = `<div class="col-4 d-flex coloreBodyCentrale m-3 me-0">
   //   <img id="immagineFooter" src="${image}" alt="" />
   //   <div class="align-self-center ms-2">
@@ -138,9 +139,10 @@ async function firstSelection() {
 
     // POPOLAZIONE CARD ALBUM
     rigaSelection1.innerHTML = "";
+    let j = 1
     for (let i of randomArray) {
 
-      rigaSelection1.innerHTML += `<div class="cardFlex mb-4"><div class="image-wrapper">
+      rigaSelection1.innerHTML += `<div class="cardFlex mb-4" id="card${j}"><div class="image-wrapper">
                         <img src="${jsonArray[i].album.cover_big}" alt="album cover" class="card-img object-fit-cover img-fluid" onclick="location.assign ('indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}')">
                         </div>
                         <div class="p-1 divP">
@@ -202,7 +204,7 @@ async function firstSelection() {
                   </div>
                     
                         </div>`
-
+      j++
 
     }
 
@@ -231,9 +233,10 @@ async function secondSelection() {
 
     // POPOLAZIONE CARD ALBUM
     rigaSelection2.innerHTML = "";
+    j = 1
     for (let i of randomArray) {
 
-      rigaSelection2.innerHTML += `<div class="cardFlex mb-4"><div class="image-wrapper">
+      rigaSelection2.innerHTML += `<div class="cardFlex mb-4" id="card${j}"><div class="image-wrapper">
       <img src="${jsonArray[i].album.cover_big}" alt="album cover" class="card-img object-fit-cover img-fluid" onclick="location.assign ('indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}')">
         </div><div class="p-1 divP">
           <a href="indexArtisti.html?id=${jsonArray[i].artist.id}"> <h5 class="titoloCard">${jsonArray[i].artist.name}</h5> </a>
@@ -295,6 +298,8 @@ async function secondSelection() {
     
         </div>`
 
+      j++
+
     }
 
   } catch (error) {
@@ -320,9 +325,10 @@ async function thirdSelection() {
     const randomArray = myRandomFunction(myOggetto);
 
     rigaSelection3.innerHTML = "";
+    j = 1
     for (let i of randomArray) {
 
-      rigaSelection3.innerHTML += `<div class="cardFlex mb-4"><div class="image-wrapper">
+      rigaSelection3.innerHTML += `<div class="cardFlex mb-4" id="card${j}"><div class="image-wrapper">
       <img src="${jsonArray[i].album.cover_big}" alt="album cover" class="card-img object-fit-cover img-fluid" onclick="location.assign ('indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}')">
                         </div><div class="p-1 divP">
                           <a href="indexArtisti.html?id=${jsonArray[i].artist.id}"> <h5 class="titoloCard">${jsonArray[i].artist.name}</h5> </a>
@@ -383,6 +389,7 @@ async function thirdSelection() {
                   </div>
                     
                         </div>`
+      j++
 
     }
 
