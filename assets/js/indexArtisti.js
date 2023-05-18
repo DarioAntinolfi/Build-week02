@@ -45,8 +45,8 @@ async function retrieveArtist() {
             <div class="list-group-item listaBrani image">
               <img class="divImmaginePopolari" src="${i.album.cover}" alt="Album Cover">
             </div>
-            <div class="w-50 list-group-item listaBrani title">${i.title}</div>
-            <div class="list-group-item listaBrani rank">${i.rank}</div>
+            <div class="w-25 list-group-item listaBrani title">${i.title}</div>
+            <div class="w-25 list-group-item listaBrani rank">${i.rank}</div>
             <div class="list-group-item listaBrani duration">${time(i.duration)}</div>
         </div>`
             j++;
