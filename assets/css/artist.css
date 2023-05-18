@@ -1,8 +1,5 @@
 .sfondoSezioneCentrale {
     padding: 0 1rem;
-    background-color: blueviolet; /* Questo colore è messo qui a babbo per assicurarsi che la sezione sia gestita in maniera inivoca e che gli si possa assegnare l'immagine di sfondo desiderata*/
-    min-height: 15rem;
-    max-height: 50rem;
 }
 
 .verifiedIcon {
