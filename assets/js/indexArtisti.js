@@ -108,8 +108,6 @@ const playlistNames = [
     "ma(ncanza) che cazzo ne so io (gen-feb 2021)",
 ];
 
-const playlist = () => {
-];
 
 const playlist = () => {
     arrayLaterale.innerHTML = ""
@@ -117,5 +115,4 @@ const playlist = () => {
         arrayLaterale.innerHTML += `<div class="playList-wrapper">${i}</div>`
         arrayLaterale.innerHTML += `<div class="playList-wrapper">${i}</div>`
     }
-}
 }
