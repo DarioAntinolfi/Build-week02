@@ -1,58 +1,75 @@
-.containerAlbumHeader {
-    background: rgb(72,78,78);
-    background: linear-gradient(0deg, rgb(78, 82, 82) 0%, rgba(255,255,255,1) 100%);
-    padding: 1rem;
+.coloreBody {
+  background-color: #121212;
 }
 
-.containerAlbumBody {
-    background: rgb(9,9,9);
-    background: linear-gradient(0deg, rgba(9,9,9,1) 0%, rgb(64, 66, 66) 77%);
+.divImmaginePopolari {
+  width: 50%;
 }
 
-.albumTitle {
-    font-size: 3rem;
-}
-
-.iconeAlbumPage {
-    
-    padding: 1.5rem 0rem;
-}
-
-.albumIcon {
-   margin:0 1rem;
+.contentSfondoSezioneCentrale {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  margin: 2%;
 }
 
 #playIcon {
- color: #1FDF64 ;
- background-color: black; 
- border-radius: 50%;
- margin-right:1rem;
+  color: #1fdf64;
+  background-color: black;
+  border-radius: 50%;
+  margin-right: 1rem;
 }
 
-#clockIcon {
-    color: rgb(228, 228, 228);
+.btnFollowing {
+  border-radius: 5px;
+  color: white;
+  background-color: transparent;
+  border: 0.2px solid white;
+  padding: 0.2rem 1rem;
 }
 
-.branoAlbum {
-    color: rgb(228, 228, 228);    
+.listaBrani {
+  background-color: transparent;
+  color: white;
+  border: 0;
 }
 
-/* Abbiamo preso singolarmente ogni elemento delle canzone nella sezione Album e affidato una classe in maniera tale da poter assegnare ad ognuno di essi una groth. Lo scopo è di avere un layout il più simile possibile a quello di riferimento*/
-
-.elementoBranoAlbum1 {
-    list-style: none;
-    flex-grow: .5;
+.numero {
+  flex-grow: 1;
 }
 
-.elementoBranoAlbum2 {
-    flex-grow: 10;
-    list-style: none
+.image {
+  flex-grow: 1;
 }
-.elementoBranoAlbum3 {
-    flex-grow: 4;
-    list-style: none
+
+.title {
+  flex-grow: 10;
 }
-.elementoBranoAlbum4 {
-    flex-grow: 1;
-    list-style: none;
+
+.rank {
+  flex-grow: 5;
+}
+
+.duration {
+  flex-grow: 1;
+}
+
+.imgBraniCheTiPiacciono {
+  border-radius: 50%;
+}
+
+.visualizzaAltro {
+  font-size: 0.8rem;
+  padding-left: 0.8rem;
+}
+
+/*album*/
+
+#h2HeroAlbum {
+  font-size: 3rem;
+}
+
+.miniIconaHero {
+  width: 30px;
+  border-radius: 100%;
 }
