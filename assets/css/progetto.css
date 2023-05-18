@@ -9,6 +9,10 @@ hr {
   border-color: white;
 }
 
+.coloreHero {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .imgAmici {
   border-radius: 100%;
 }
