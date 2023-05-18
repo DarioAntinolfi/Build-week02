@@ -146,7 +146,7 @@ async function firstSelection() {
                         <img src="${jsonArray[i].album.cover_big}" alt="album cover" class="card-img object-fit-cover img-fluid" onclick="location.assign ('indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}')">
                         </div>
                         <div class="p-1 divP">
-                          <a href="indexArtisti.html?id=${jsonArray[i].artist.id}"> <h5 class="titoloCard">${jsonArray[i].artist.name}</h5> </a>
+                          <a href="artista.html?id=${jsonArray[i].artist.id}"> <h5 class="titoloCard">${jsonArray[i].artist.name}</h5> </a>
                           <a href="indexAlbum.html?id=${jsonArray[i].album.id}&art=${jsonArray[i].artist.id}"> <p class="testoCard">${jsonArray[i].album.title}</p></a> 
                         </div>
                         <div
