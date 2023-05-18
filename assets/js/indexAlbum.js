@@ -6,7 +6,17 @@ const riga = document.querySelector(".rigaAlbum");
 const dettagliAlbum = document.querySelector(".dettagliAlbum");
 const titoloAlbum = document.querySelector(".titoloAlbum");
 const playerBar = document.querySelector(".player");
-
+/* Info dei brani*/
+const numeroBrano = document.querySelector(".elementoBranoAlbum1");
+const titoloBrano = document.querySelector(".elementoBranoAlbum2");
+const riproduzioniBrano = document.querySelector(".elementoBranoAlbum3");
+const durataBrano = document.querySelector(".elementoBranoAlbum4");
+/* E' la sezione in cui si inseriscono con innerHTML tutti le info dei brani */
+const branoAlbum = document.querySelector(".branoAlbum");
+/* Variabili in cui andare ad inserire il innerHTML per il Hero */
+const imgAlbumHero = document.querySelector(".imgAlbumHero");
+const albumTitleHero = document.querySelector(".albumTitleHero");
+const infoAlbumHero = document.querySelector(".infoAlbumHero");
 
 async function retrieveSingleAlbum() {
     try {
