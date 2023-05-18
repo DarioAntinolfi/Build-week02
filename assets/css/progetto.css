@@ -60,13 +60,18 @@ a:visited {
   padding-right: 5px;
 }
 
-span {
-  color: white;
+
+#cont-img-hero {
+  width:30%;
+  min-width: 180px;
 }
+
 
 #hero-img {
   width: 100%;
 }
+
+
 
 .adapt-btn {
   border-radius: 30px;
@@ -100,9 +105,17 @@ span {
   font-size: small;
 }
 
-.divBuonaseraRounded {
+.containerBuonaseraRounded {
+  width: 32%;
+  background-color: #2a2a2a;
+}
+
+.divBuonaseraRounded,
+.containerBuonaseraRounded {
   border-radius: 5px;
 }
+
+
 
 #immagineFooter {
   width: 20%;
@@ -116,12 +129,11 @@ span {
 
 .divBarraMobile {
   padding-top: 1.5%;
-  background: rgb(0, 0, 0);
   background: linear-gradient(
-    0deg,
+    to top,
     rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(46, 45, 45, 0.3960434515603116) 90%
+    rgba(0, 0, 0, 1) 25%,
+    rgba(0, 0, 0, 0) 100%
   );
 }
 
@@ -136,7 +148,7 @@ span {
   border-radius: 8px;
   height: 5px;
   outline: none;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
 }
 
 #divBarraVolume {
@@ -148,11 +160,121 @@ span {
   bottom: 0;
 }
 
+.cardFlex {
+  width:20%;
+  background-color: gray;
+  padding: 1.1%;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  background-color: #161616;
+}
+
+.cardFlex img {
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 5%;
+  margin-top: 0%;
+  border-radius: 10px;
+}
+
+.cardFlex p {
+  margin: 0%;
+}
+
+.nascondi-annunci {
+  background-color: #21252945;
+  margin: 1.5%;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 30px;
+  font-size: x-small;
+}
+
+.coloreBodyCentrale {
+  background-color: #212121;
+}
+
+.barraVolumeFooter {
+  margin-left: 10%;
+}
+
+@media screen and (max-width: 1200px) {
+#card5 {
+    display:none;
+  }
+
+
+}
+
 @media screen and (max-width: 992px) {
-  .divBuonaseraRounded {
+  .mainContainer {
+    padding: 3rem 0;
+  }
+  .image-wrapper {
+    width:50%;
+  }
+
+  .cardFlex img {
+    width: 100%;
+    margin: 0%;
+    border-radius: 0;
+    margin-bottom: 5%;
+  }
+  .cardFlex {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 5%;
+  }
+  .cardFlex p {
+    font-size: 4rem;
+    margin-left: 5%;
+  }
+
+  .cardFlex h5 {
+    margin-left: 5%;
+  }
+
+  .divP {
+    width: 50%;
+  }
+
+  .play {
+    display: flex;
+  }
+
+  .play p {
+    font-size: 1rem;
+    margin: 0;
+    padding-right: 15px;
+  }
+
+  .card-img {
+    width: 200px;
+  }
+  .containerBuonaseraRounded {
+    width: 48%;
     background-color: transparent;
   }
-  .cardFlex img {
-    width: 50%;
+
+  .buonaseraContainer h4 {
+    font-size: 2em;
+  }
+
+  .buonaseraContainer p {
+    margin-left: 5%;
+    font-size: 1em;
+  }
+
+  @media screen and (max-width: 768px) {
+    .containerBuonaseraRounded {
+      width: 48%;
+      background-color: transparent;
+    }
+
+    .mainContainer {
+      padding: 3rem 0;
+    }
   }
 }
