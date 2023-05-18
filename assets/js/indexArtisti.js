@@ -40,18 +40,18 @@ async function retrieveArtist() {
 
         for (let i of myJsonPopuplarTrack.data) {
 
-            elencoBrani.innerHTML += `<ul class="list-group list-group-horizontal d-flex">
-            <li class="list-group-item listaBrani numero">${j}</li>
-            <li class="list-group-item listaBrani image ">
-              <img src="${i.album.cover}" alt="Album Cover">
-            </li>
-            <li class="list-group-item listaBrani title">${i.title}</li>
-            <li class="list-group-item listaBrani rank">${i.rank}</li>
-            <li class="list-group-item listaBrani duration">${time(i.duration)}</li>
-        </ul>`
+            elencoBrani.innerHTML += `<div class="my-3 d-flex justify-content-between align-items-center">
+            <div class="me-2 list-group-item listaBrani numero">${j}</div>
+            <div class="list-group-item listaBrani image">
+              <img class="divImmaginePopolari" src="${i.album.cover}" alt="Album Cover">
+            </div>
+            <div class="w-25 list-group-item listaBrani title">${i.title}</div>
+            <div class="w-25 list-group-item listaBrani rank">${i.rank}</div>
+            <div class="list-group-item listaBrani duration">${time(i.duration)}</div>
+        </div>`
             j++;
         }
-        sfondoSezioneCentrale.innerHTML = `<img src="${myJsonArtist.picture_big}" class="w-100 object-fit-cover" alt="Album Cover">`;
+        sfondoSezioneCentrale.innerHTML += `<img class="imgAlbumCover" src="${myJsonArtist.picture_big}" alt="Album Cover">`;
         //${myJsonArtist.picture_big}
     }
     catch (error) {
