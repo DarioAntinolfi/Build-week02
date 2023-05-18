@@ -209,7 +209,7 @@ a:visited {
   position: absolute;
   height: 10px;
   width: 0%;
-  animation: progress-forward 5s linear infinite;
+  animation: progress-forward 60s linear infinite;
   background: white;
   border-radius: 15px;
 }
