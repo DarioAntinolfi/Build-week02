@@ -9,10 +9,6 @@ hr {
   border-color: white;
 }
 
-.coloreHero {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 .imgAmici {
   border-radius: 100%;
 }
@@ -116,7 +112,7 @@ a:visited {
 }
 
 #immagineFooter {
-  width: 100%;
+  width: 20%;
   border-radius: 5px;
 }
 
@@ -192,6 +188,10 @@ a:visited {
   background-color: #212121;
 }
 
+.barraVolumeFooter {
+  margin-left: 10%;
+}
+
 .arrayLaterale {
   color: rgb(196, 196, 196);
 }
@@ -218,16 +218,6 @@ a:visited {
   margin-right: 3px;
 }
 
-.imgFooter-wrapper {
-  width:15%;
-  min-width: 75px;
-  margin-right: 1rem;
-}
-
-.footerText-wrapper {
-  width:50%;
-}
-
 @keyframes progress-forward {
   0% {
     width: 0%;
@@ -237,38 +227,30 @@ a:visited {
   }
 }
 
+
+
 /*fine progress bar*/
 
-.croce {
-  margin-right: 3px;
-}
-
-@media screen and (max-width: 1200px) {
-  .card4 {
-    display: none;
-  }
-
+@media screen and (max-width: 1100px) {
   .mainContainer {
     display: none;
   }
 }
 
 @media screen and (max-width: 992px) {
-  .card3{
-    display:none;
-  }
-
   .mainContainer {
     padding: 3rem 0;
   }
-
   .image-wrapper {
     width: 50%;
   }
 
   .cardFlex {
-    width: 30%;
-    padding: 1.5%;
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    flex-wrap: wrap;
+    padding: 2%;
   }
 
   .divP {
@@ -286,7 +268,7 @@ a:visited {
   }
 
   .card-img {
-    width: 100%;
+    width: 200px;
   }
   .containerBuonaseraRounded {
     width: 48%;
@@ -301,38 +283,79 @@ a:visited {
     margin-left: 5%;
     font-size: 1em;
   }
-}
 
   @media screen and (max-width: 768px) {
- 
-    .cardFlex img {
-      width: 100%;
-      margin: 0%;
-      border-radius: 0;
-      margin-bottom: 5%;
-    }
-    .cardFlex {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      flex-wrap: wrap;
-      padding: 5%;
-    }
-    .cardFlex p {
-      font-size: 4rem;
-      margin-left: 5%;
-    }
-  
-    .cardFlex h5 {
-      margin-left: 5%;
+    .containerBuonaseraRounded {
+      width: 48%;
+      background-color: transparent;
     }
 
-    .card3 {
-      display: none;
+    .mainContainer {
+      padding: 3rem 0;
     }
-  
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .cardFlex img {
+    width: 100%;
+    margin: 0%;
+    border-radius: 0;
+    margin-bottom: 5%;
+  }
+  .cardFlex {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 5%;
+  }
+  .cardFlex p {
+    font-size: 4rem;
+    margin-left: 5%;
+  }
+
+  .cardFlex h5 {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .riga{
+    flex-wrap: wrap;
+  }
+
+  .card3, .card4, .card5{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .riga{
+    flex-wrap: wrap;
+  }
+
+  .card3, .card4 {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .riga{
+    flex-wrap: nowrap;
+  }
+
+  .card5 {
+    display: block;
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+  .card5 {
+    display: none;
   }
 
 
-  
-
+}
