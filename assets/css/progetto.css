@@ -189,7 +189,7 @@ a:visited {
 }
 
 .barraVolumeFooter {
-  margin-left: 10%;
+  margin-left: 20%;
 }
 
 .arrayLaterale {
@@ -224,6 +224,10 @@ a:visited {
 }
 
 /*fine progress bar*/
+
+.croce {
+  margin-right: 3px;
+}
 
 @media screen and (max-width: 1100px) {
   .mainContainer {
