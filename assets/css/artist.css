@@ -1,5 +1,52 @@
+.coloreBody {
+  background-color: #121212;
+}
+
+.divImmaginePopolari {
+  width: 50%;
+}
+
 .sfondoSezioneCentrale {
-  padding: 0 1rem;
+  padding: 1rem;
+  width: 100%;
+  position: relative;
+}
+
+.contentSfondoSezioneCentrale {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  margin: 2%;
+}
+
+.imgAlbumCover {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+  position: relative;
+  bottom: 80px;
+  z-index: 0;
+}
+
+.divArtistaHero {
+  position: absolute;
+  bottom: 90px;
+  left: 30px;
+  z-index: 1;
+}
+
+.divArtistaHero h2 {
+  font-size: 5rem;
+}
+
+.divArtistaHero p {
+  font-size: 1.2rem;
+}
+
+#freccette {
+  position: relative;
+  z-index: 1;
 }
 
 .verifiedIcon {
