@@ -113,6 +113,6 @@ const playlist = () => {
     arrayLaterale.innerHTML = ""
     for (let i of playlistNames) {
         arrayLaterale.innerHTML += `<div class="playList-wrapper">${i}</div>`
-        arrayLaterale.innerHTML += `<div class="playList-wrapper">${i}</div>`
+        // arrayLaterale.innerHTML += `<div class="playList-wrapper">${i}</div>`
     }
 }
