@@ -42,7 +42,7 @@ function player(image, album, artista) {
 
   playerBar.innerHTML = `<div class="croce d-flex flex-row-reverse">
   <svg
-    onclick=""
+    onclick="closePlayer()"
     class="croce"
     xmlns="http://www.w3.org/2000/svg"
     width="20"
