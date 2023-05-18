@@ -85,7 +85,7 @@ window.onload = () => {
 
 const playerCheck = () => {
     const player = localStorage.getItem("display");
-    if (player) {
+    if (player === true) {
         playerBar.classList.remove("d-none");
         playerBar.classList.add("d-block");
 

@@ -24,6 +24,14 @@ function myRandomFunction(param) {
   } return counterArray
 }
 
+const playerCheck = () => {
+  const player = localStorage.getItem("display");
+  if (player === true) {
+    playerBar.classList.remove("d-none");
+    playerBar.classList.add("d-block");
+  }
+}
+
 function closePlayer() {
   playerBar.classList.remove("d-block");
   playerBar.classList.add("d-none");
@@ -629,6 +637,7 @@ window.onload = () => {
   secondSelection();
   thirdSelection();
   heroSelection();
+  playerCheck();
 }
 
 const playlistNames = [
