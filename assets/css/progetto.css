@@ -9,6 +9,10 @@ hr {
   border-color: white;
 }
 
+.coloreHero {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .imgAmici {
   border-radius: 100%;
 }
@@ -189,7 +193,7 @@ a:visited {
 }
 
 .barraVolumeFooter {
-  margin-left: 10%;
+  margin-left: 15%;
 }
 
 .arrayLaterale {
@@ -227,9 +231,11 @@ a:visited {
   }
 }
 
-
-
 /*fine progress bar*/
+
+.croce {
+  margin-right: 3px;
+}
 
 @media screen and (max-width: 1100px) {
   .mainContainer {
@@ -241,8 +247,6 @@ a:visited {
   #card5 {
     display: none;
   }
-
-
 }
 
 @media screen and (max-width: 992px) {
