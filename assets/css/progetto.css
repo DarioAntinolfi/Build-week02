@@ -214,6 +214,10 @@ a:visited {
   border-radius: 15px;
 }
 
+.croce {
+  margin-right: 3px;
+}
+
 @keyframes progress-forward {
   0% {
     width: 0%;
@@ -222,6 +226,8 @@ a:visited {
     width: 100%;
   }
 }
+
+
 
 /*fine progress bar*/
 
@@ -239,6 +245,8 @@ a:visited {
   #card5 {
     display: none;
   }
+
+
 }
 
 @media screen and (max-width: 992px) {
