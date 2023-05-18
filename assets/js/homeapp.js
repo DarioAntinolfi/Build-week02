@@ -29,6 +29,8 @@ function player() {
 
   playerBar.classList.remove("d-none");
   playerBar.classList.add("d-block");
+  displayOn = true
+  localStorage.setItem("display", displayOn)
 
   // playerBar.innerHTML = `<div class="col-4 d-flex coloreBodyCentrale m-3 me-0">
   //   <img id="immagineFooter" src="${image}" alt="" />
