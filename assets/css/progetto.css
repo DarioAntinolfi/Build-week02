@@ -249,12 +249,15 @@ a:visited {
   }
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 1200px) {
   .card5 {
     display: none;
   }
 }
 
+=======
+>>>>>>> 150273d86895be07509b1554bc70a25faa037cc9
 @media screen and (max-width: 992px) {
   .mainContainer {
     padding: 3rem 0;
@@ -263,26 +266,12 @@ a:visited {
     width: 50%;
   }
 
-  .cardFlex img {
-    width: 100%;
-    margin: 0%;
-    border-radius: 0;
-    margin-bottom: 5%;
-  }
   .cardFlex {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 45%;
     flex-wrap: wrap;
     padding: 5%;
-  }
-  .cardFlex p {
-    font-size: 4rem;
-    margin-left: 5%;
-  }
-
-  .cardFlex h5 {
-    margin-left: 5%;
   }
 
   .divP {
@@ -328,4 +317,54 @@ a:visited {
   }
 }
 
+<<<<<<< HEAD
 
+=======
+@media screen and (max-width: 768px) {
+  .card3, .card4, .card5{
+    display: none;
+  }
+
+  .cardFlex img {
+    width: 100%;
+    margin: 0%;
+    border-radius: 0;
+    margin-bottom: 5%;
+  }
+  .cardFlex {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 5%;
+  }
+  .cardFlex p {
+    font-size: 4rem;
+    margin-left: 5%;
+  }
+
+  .cardFlex h5 {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .riga{
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .riga{
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .card5 {
+    display: none;
+  }
+
+
+}
+>>>>>>> 150273d86895be07509b1554bc70a25faa037cc9
