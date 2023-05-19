@@ -330,10 +330,7 @@ async function retrieveSingleAlbum() {
               <p>${j}</p>
             </div>
             <div>
-              <p class="m-0">${i.title
-                }</p>
-              <a href="artista.html?id=${urlArtist}"><p class="text-secondary">${i.artist.name
-                }</p></a>
+              
               <p class="m-0" onclick="player('${i.album.cover_big}','${i.title}','${i.artist.name}')">${i.title
                 }</p>
               <a href="artista.html?id=${urlArtist}"><p class="text-secondary" >${i.artist.name
