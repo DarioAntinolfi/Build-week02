@@ -1,0 +1,123 @@
+body {
+  overflow-x: hidden;
+  background-color: #121212;
+}
+
+.coloreBody {
+  background-color: #121212;
+}
+
+.divImmaginePopolari {
+  width: 50%;
+}
+
+.contentSfondoSezioneCentrale {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  margin: 2%;
+}
+
+#playIcon {
+  color: #1fdf64;
+  background-color: black;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.btnFollowing {
+  border-radius: 5px;
+  color: white;
+  background-color: transparent;
+  border: 0.2px solid white;
+  padding: 0.2rem 1rem;
+}
+
+.listaBrani {
+  background-color: transparent;
+  color: white;
+  border: 0;
+}
+
+.numero {
+  flex-grow: 1;
+}
+
+.image {
+  flex-grow: 1;
+}
+
+.title {
+  flex-grow: 10;
+}
+
+.rank {
+  flex-grow: 5;
+}
+
+.duration {
+  flex-grow: 1;
+}
+
+.imgBraniCheTiPiacciono {
+  border-radius: 50%;
+}
+
+.visualizzaAltro {
+  font-size: 0.8rem;
+  padding-left: 0.8rem;
+}
+
+/*album*/
+
+#h2HeroAlbum {
+  font-size: 3rem;
+}
+
+.miniIconaHero {
+  width: 30px;
+  border-radius: 100%;
+}
+
+.testoAlbumStatico {
+  font-size: 1.2rem;
+  margin-left: 3.5%;
+}
+
+.iconeSinistra {
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+
+@media screen and (max-width: 992px) {
+  .iconeMobileDestra {
+    margin-right: 2%;
+  }
+
+  .iconeSinistra {
+    margin: 0;
+  }
+
+  #cont-img-hero {
+    width: 70%;
+  }
+  .heroContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .freccia-mobile {
+    margin-top: 2%;
+    margin-right: 8%;
+  }
+
+  .bodyMobileListaBrani {
+    margin-top: 4%;
+    padding-left: 4%;
+    padding-right: 10%;
+  }
+}
+
+.bodyMobileListaBrani {
+  margin-top: 4%;
+  padding-right: 4%;
+}

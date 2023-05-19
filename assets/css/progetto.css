@@ -1,0 +1,400 @@
+svg,
+p,
+h2,
+h4 {
+  color: white;
+}
+
+hr {
+  border-color: white;
+}
+
+.imgAmici {
+  border-radius: 100%;
+}
+
+#divSinistra {
+  margin-left: 20px;
+}
+
+.testoPiccolo {
+  font-size: xx-small;
+  margin-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.imgDestra {
+  border-radius: 100%;
+  width: 25px;
+  margin: 0.5rem;
+}
+
+.textDestra {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+#utente {
+  border-radius: 100%;
+  width: 20px;
+  margin: 0;
+}
+
+#contenitore-utente {
+  border-radius: 20px;
+  background-color: black;
+  padding-right: 5px;
+}
+
+#cont-img-hero {
+  width: 30%;
+  min-width: 180px;
+}
+
+#hero-img {
+  width: 100%;
+}
+
+.adapt-btn {
+  border-radius: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-right: 10px;
+}
+
+.img-buonasera {
+  width: 65px;
+  height: 65px;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.bg-gray {
+  background-color: gray;
+}
+
+.text-buonasera {
+  margin-left: 10px;
+}
+
+.titoloCard {
+  font-size: medium;
+  color: white;
+}
+
+.testoCard {
+  font-size: small;
+}
+
+.containerBuonaseraRounded {
+  width: 32%;
+  background-color: #2a2a2a;
+}
+
+.divBuonaseraRounded,
+.containerBuonaseraRounded {
+  border-radius: 5px;
+}
+
+
+#pTestFooter {
+  color: black;
+  margin: 0;
+}
+
+.divBarraMobile {
+  padding-top: 1.5%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 25%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+#barraVolume {
+  background: linear-gradient(
+    to right,
+    #ffffff 0%,
+    #ffffff 40%,
+    #ffffff 40%,
+    #ffffff 100%
+  );
+  border-radius: 8px;
+  height: 5px;
+  outline: none;
+  /* -webkit-appearance: none; */
+}
+
+#divBarraVolume {
+  margin-bottom: 6px;
+}
+
+.sticky {
+  position: sticky;
+  bottom: 0;
+}
+
+.cardFlex {
+  width: 20%;
+  background-color: gray;
+  padding: 1.1%;
+  padding-bottom: 20px;
+  border-radius: 10px;
+  background-color: #161616;
+}
+
+.cardFlex img {
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 5%;
+  margin-top: 0%;
+  border-radius: 10px;
+}
+
+.cardFlex p {
+  margin: 0%;
+}
+
+.nascondi-annunci {
+  background-color: #21252945;
+  margin: 1.5%;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 30px;
+  font-size: x-small;
+}
+
+.coloreBodyCentrale {
+  background-color: #212121;
+}
+
+.barraVolumeFooter {
+  margin-left: 10%;
+}
+
+.arrayLaterale {
+  color: rgb(196, 196, 196);
+}
+
+.imgFooter-wrapper {
+  width:15%;
+  min-width: 75px;
+  margin-right: 1rem;
+}
+
+.footerText-wrapper {
+  width:50%;
+}
+
+#immagineFooter {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/*progress bar*/
+
+.progress-bar {
+  position: relative;
+  height: 10px;
+  background: var(--grey);
+  border-radius: 25px;
+}
+
+.progress-fill {
+  position: absolute;
+  height: 10px;
+  width: 0%;
+  animation: progress-forward 60s linear infinite;
+  background: white;
+  border-radius: 15px;
+}
+
+.croce {
+  margin-right: 3px;
+}
+
+@keyframes progress-forward {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+
+/*fine progress bar*/
+
+@media screen and (max-width: 1100px) {
+  .mainContainer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .mainContainer {
+    padding: 3rem 0;
+  }
+  .image-wrapper {
+    width: 50%;
+  }
+
+  .cardFlex {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    flex-wrap: wrap;
+    padding: 2%;
+  }
+
+  .divP {
+    width: 50%;
+  }
+
+  .play {
+    display: flex;
+  }
+
+  .play p {
+    font-size: 1rem;
+    margin: 0;
+    padding-right: 15px;
+  }
+
+  .card-img {
+    width: 200px;
+  }
+  .containerBuonaseraRounded {
+    width: 48%;
+    background-color: transparent;
+  }
+
+  .buonaseraContainer h4 {
+    font-size: 3em;
+  }
+
+  .buonaseraContainer p {
+    margin-left: 5%;
+    font-size: 1em;
+  }
+
+  @media screen and (max-width: 768px) {
+    .containerBuonaseraRounded {
+      width: 48%;
+      background-color: transparent;
+    }
+
+    .mainContainer {
+      padding: 3rem 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .cardFlex img {
+    width: 100%;
+    margin: 0%;
+    border-radius: 0;
+    margin-bottom: 2%;
+  }
+  .cardFlex {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 2%;
+  }
+
+  .cardFlex p {
+    font-size: 3rem;
+    margin-left: 5%;
+  }
+
+  .cardFlex p span{
+    font-size: 2rem;
+    margin-left: 5%;
+  }
+
+  h4{
+    font-size: 3rem;
+  }
+
+  .cardFlex h5 {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .riga{
+    flex-wrap: wrap;
+  }
+
+  .card3, .card4, .card5{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .riga{
+    flex-wrap: wrap;
+  }
+
+  .card3, .card4 {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .riga{
+    flex-wrap: nowrap;
+  }
+
+  .card5 {
+    display: block;
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+  .card5 {
+    display: none;
+  }
+
+
+}
+
+
+  
+
+  .imgFooter-wrapper {
+    width:15%;
+    min-width: 75px;
+    margin-right: 1rem;
+  }
+  
+  .footerText-wrapper {
+    width:50%;
+  }
+
+  #immagineFooter {
+    width: 100%;
+    border-radius: 5px;
+  }

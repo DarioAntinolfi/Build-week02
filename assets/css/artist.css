@@ -1,0 +1,163 @@
+.coloreBody {
+  background-color: #121212;
+}
+
+.divImmaginePopolari {
+  width: 50%;
+}
+
+.sfondoSezioneCentrale {
+  padding: 1rem;
+  height: 420px;
+  width: 100%;
+  position: relative;
+}
+
+
+.contentSfondoSezioneCentrale {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  margin: 2%;
+}
+
+.imgAlbumCover {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+  position: relative;
+  bottom: 80px;
+  z-index: 0;
+}
+
+.divArtistaHero {
+  position: absolute;
+  bottom:0;
+  left: 30px;
+  z-index: 1;
+}
+
+.divArtistaHero h2 {
+  font-size: 5rem;
+}
+
+.divArtistaHero p {
+  font-size: 1.2rem;
+}
+
+#freccette {
+  position: relative;
+  z-index: 1;
+}
+
+.verifiedIcon {
+  color: #3d91f4;
+  background-color: white;
+  border-radius: 50%;
+}
+
+#playIcon {
+  color: #1fdf64;
+  background-color: black;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.btnFollowing {
+  border-radius: 5px;
+  color: white;
+  background-color: transparent;
+  border: 0.2px solid white;
+  padding: 0.2rem 1rem;
+}
+
+.listaBrani {
+  background-color: transparent;
+  color: white;
+  border: 0;
+}
+
+.numero {
+  flex-grow: 1;
+}
+
+.image {
+  flex-grow: 1;
+}
+
+.title {
+  flex-grow: 10;
+}
+
+.rank {
+  flex-grow: 5;
+}
+
+.duration {
+  flex-grow: 1;
+}
+
+.imgBraniCheTiPiacciono {
+  border-radius: 50%;
+}
+
+.visualizzaAltro {
+  font-size: 0.8rem;
+  padding-left: 0.8rem;
+}
+
+.imgFooter-rapper {
+    width: 15%;
+    min-width: 75px;
+    margin-right: 1rem;
+}
+
+.footerText-wrapper {
+    width: 50%;
+}
+
+#immagineFooter {
+    width:100%;
+    border-radius: 5px;
+}
+
+.greenSpotify {
+  color: #1fdf64;
+}
+
+.greenSpotifyDark {
+  color: #0c6918;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width:1200px) {
+  .containerMain {
+    order:2;
+  }
+  .contenitorePopolari {
+    order:1;
+  }
+
+  .numero {
+    flex-grow: 1;
+  }
+  
+  .image {
+    flex-grow: 1;
+  }
+  
+  .title {
+    flex-grow: 10;
+  }
+  
+  .rank {
+    flex-grow: 5;
+  }
+  
+  .duration {
+    flex-grow: 1;
+  }
+
+}
