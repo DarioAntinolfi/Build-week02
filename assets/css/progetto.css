@@ -287,7 +287,7 @@ a:visited {
   }
 
   .buonaseraContainer h4 {
-    font-size: 2em;
+    font-size: 3em;
   }
 
   .buonaseraContainer p {
@@ -313,18 +313,28 @@ a:visited {
     width: 100%;
     margin: 0%;
     border-radius: 0;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
   }
   .cardFlex {
     display: flex;
     flex-direction: row;
     width: 100%;
     flex-wrap: wrap;
-    padding: 5%;
+    padding: 2%;
   }
+
   .cardFlex p {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-left: 5%;
+  }
+
+  .cardFlex p span{
+    font-size: 2rem;
+    margin-left: 5%;
+  }
+
+  h4{
+    font-size: 3rem;
   }
 
   .cardFlex h5 {
