@@ -2,7 +2,8 @@
 const urlArtista = "https://striveschool-api.herokuapp.com/api/deezer/artist/"
 const urlIdArtista = new URLSearchParams(location.search).get("id");
 const searchUrlArtista = `${urlArtista}${urlIdArtista}`;
-const parFans = document.querySelector("p")
+const parFans = document.querySelector("p");
+const smallParFans = document.querySelectorAll(".numeroFan");
 const riga = document.querySelector(".row");
 const nomeArtista = document.querySelector(".nomeArtista");
 const elencoBrani = document.querySelector(".elencoBrani");
@@ -301,6 +302,7 @@ async function retrieveArtist() {
 
         nomeArtista.innerHTML = `${artista}`
         parFans.innerHTML = `numero fans ${fans}`
+        smallParFans[1].innerHTML = `numero fans ${fans}`
 
         const popularTrack = await fetch(myJsonArtist.tracklist)
 
@@ -313,14 +315,19 @@ async function retrieveArtist() {
 
         for (let i of myJsonPopuplarTrack.data) {
 
-            elencoBrani.innerHTML += `<div class="my-3 d-flex justify-content-between align-items-center">
+            elencoBrani.innerHTML += `<div class="my-3 d-flex align-items-center">
             <div class="me-2 list-group-item listaBrani numero">${j}</div>
             <div class="list-group-item listaBrani image">
               <img class="divImmaginePopolari" src="${i.album.cover}" onclick="location.assign('album.html?id=${i.album.id}')"alt="Album Cover">
             </div>
-            <div class="w-25 list-group-item listaBrani title"><p class="mb-0" onclick="player('${i.album.cover_big}','${i.title}','${i.artist.name}' )">${i.title}</p></div>
-            <div class="w-25 list-group-item listaBrani rank">${i.rank}</div>
-            <div class="list-group-item listaBrani duration">${time(i.duration)}</div>
+                
+                <div class="w-25 list-group-item listaBrani title"><p class="mb-0" onclick="player('${i.album.cover_big}','${i.album.title}','${i.artist.name}' )">${i.title}<span class="d-lg-none"><br>${i.rank}</span></p></div>
+                <div class="w-25 list-group-item listaBrani rank d-none d-lg-inline-block ps-5">${i.rank}</div>
+            
+            <div class="list-group-item listaBrani duration d-none d-lg-inline-block">${time(i.duration)}</div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-three-dots-vertical d-lg-none" viewBox="0 0 16 16">
+            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+            </svg>
         </div>`
             j++;
         }

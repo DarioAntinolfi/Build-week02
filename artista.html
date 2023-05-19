@@ -12,7 +12,7 @@
   <title>Document</title>
 </head>
 
-  <body>
+  <body class="coloreBody">
     <div class="coloreBody">
       <div class="row">
         <div class="col-lg-2 bg-black d-none d-lg-block">
@@ -228,100 +228,202 @@
         <!--/testo-->
       </div>
 
-      <!--centro-->
-      <div class="col-12 coloreBody col-lg-8 p-0">
-        <div>
-          <div class="container p-0">
-            <!-- Mettiamo il seguente div per poter dare lo stesso sfondo a tutto quel che sta nel header della sezione centrale-->
-            <div class="sfondoSezioneCentrale">
-              <!--frecce-->
-              <div id="freccette" class="m-2 justify-content-between d-none d-lg-flex">
-                <div>
-                  <a href="index.html" class="navigator">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                      class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd"
-                        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
-                    </svg>
-                    &nbsp;
-                    <a href="album.html" class="navigator">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                          d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
-                      </svg></a>
-                </div>
-                <!--utente-->
-                <div id="contenitore-utente">
-                  <img id="utente" src="assets/imgs/main/image-1.jpg" alt="..." />
-                  <span>Lidia Nautilus...
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                      class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                      <path
-                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
-                    </svg></span>
-                </div>
-                <!--/utente-->
-              </div>
-
-              <!--/frecce-->
-              <!--Hero-->
-              <div class="row my-4">
-                <div class="col-12 py-1 divArtistaHero">
-                  <!-- Il display:flex direction:column justify-content:end dovrebbe stare qui per allineare il testo partendo dal basso, ma non funziona. Ci seve essere qualche cosa che sovrascrive 🤔 -->
-                  <div class="d-flex align-items-center">
-                    <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="cyan"
-                      class="bi bi-patch-check-fill verifiedIcon" viewBox="0 0 16 16">
-                      <path
-                        d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z" />
-                    </svg>
-                    <span class="text-white">Artista verificato</span>
-                  </div>
-                  <h2 class="nomeArtista"></h2>
-                  <p class="numeroFan"></p>
-                </div>
-              </div>
-              <!--hero-->
-            </div>
-
-            <!--Play/following-->
-            <div class="p-3">
-              <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                class="bi bi-play-circle-fill" id="playIcon" viewBox="0 0 16 16">
-                <path
-                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z" />
-              </svg>
-              <div class="btnFollowing d-inline-block">following</div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                class="bi bi-three-dots m-3" viewBox="0 0 16 16">
-                <path
-                  d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
-              </svg>
-            </div>
-
-            <!--divido la sezione principale in due colonne-->
-            <div class="container-fluid p-3">
-              <div class="row">
-                <div class="col-7">
-                  <h4 class="text-white fw-bold mb-4">Popolari</h4>
-                  <div class="elencoBrani"></div>
+        <!--centro-->
+        <div class="col-12 coloreBody col-lg-8 p-0">
+          <div>
+            <div class="container p-0">
+              <!-- Mettiamo il seguente div per poter dare lo stesso sfondo a tutto quel che sta nel header della sezione centrale-->
+              <div class="sfondoSezioneCentrale w-100">
+                <!--frecce-->
+                <div
+                  id="freccette"
+                  class="m-2 justify-content-between d-lg-flex"
+                >
                   <div>
-                    <p class="fw-bold mt-3 visualizzaAltro">
-                      VISUALIZZA ALTRO
-                    </p>
+                    <!--Inserimento freccietta per schermo piccolo -->
+                    <a href="index.html" class="navigator d-lg-none">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="30"
+                        fill="currentColor"
+                        class="bi bi-arrow-left-circle"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
+                        /></svg>
+                      </a>
+
+                    <a href="index.html" class="navigator d-none d-lg-inline-block">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-arrow-left-circle"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"
+                        /></svg>
+                      </a>
+                    <a href="album.html" class="navigator d-none d-lg-inline-block">
+                      <svg
+                    
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-arrow-right-circle"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+                      />
+                    </a>
+                  </div>
+                  <!--utente-->
+                  <div id="contenitore-utente" class="d-none d-lg-inline-block">
+                    <img
+                      id="utente"
+                      src="assets/imgs/main/image-1.jpg"
+                      alt="..."
+                    />
+                    <span
+                      >Lidia Nautilus...
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-caret-down-fill "
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                        /></svg>
+                    </span>
+                  </div>
+                  <!--/utente-->
+                </div>
+
+                <!--/frecce-->
+                <!--Hero-->
+                <div class="row my-4">
+                  <div class="col-12 py-1 divArtistaHero">
+                    <!-- Il display:flex direction:column justify-content:end dovrebbe stare qui per allineare il testo partendo dal basso, ma non funziona. Ci seve essere qualche cosa che sovrascrive 🤔 -->
+                    <div class="d-flex align-items-center d-none d-lg-inline-block">
+                      <svg
+                        class="me-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="cyan"
+                        class="bi bi-patch-check-fill verifiedIcon"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"
+                        />
+                      </svg>
+                      <span class="text-white">Artista verificato</span>
+                    </div>
+                    <h2 class="nomeArtista"></h2>
+                    <p class="numeroFan d-none d-lg-inline-block"></p>
+                    
                   </div>
                 </div>
-                <div class="col-5">
-                  <h4 class="text-white fw-bold">Brani che ti piacciono</h4>
-                  <div class="d-flex mt-3 contenitoreImmagineBand">
-                    <div class="d-flex justify-content-center sideContent"></div>
+                <!--hero-->
+              </div>
+
+              <!--Play/following-->
+              <div class="pt-3 ps-3 ps-5">
+                <p class="numeroFan d-lg-none text-secondary "></p>
+              </div>
+              
+              <div class="p-3 d-flex justify-content-between ps-5">
+                <div class="pippo">
+                  
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="50"
+                    height="50"
+                    fill="currentColor"
+                    class="bi bi-play-circle-fill d-none d-lg-inline-block "
+                    id="playIcon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"
+                    />
+                  </svg>
+                  <div class="btnFollowing d-inline-block  border border-dark">following</div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    class="bi bi-three-dots m-3 text-secondary d-none d-lg-inline-block"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+                    />
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-three-dots-vertical m-3 text-secondary d-lg-none" viewBox="0 0 16 16">
+                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                  </svg>
+                </div>
+                <!-- Metto gli elementi che andranno spostati a destra -->
+                <div class="pippo d-lg-none pe-3" >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-shuffle greenSpotify me-3" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="50"
+                    height="50"
+                    fill="currentColor"
+                    class="bi bi-play-circle-fill bg-white greenSpotifyDark "
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <!--divido la sezione principale in due colonne-->
+              <div class="container-fluid p-3 containerMain">
+                <div class="row">
+                  <div class="col-12 col-lg-7 ps-5 pe-4 contenitorePopolari"> 
+                    <h4 class="text-white fw-bold mb-4">Popolari</h4>
+                    <div class="elencoBrani"></div>
+                    <div>
+                      <p class="fw-bold mt-3 visualizzaAltro">
+                        VISUALIZZA ALTRO
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-5 ps-5 pe-4">
+                    <h4 class="text-white fw-bold">Brani che ti piacciono</h4>
+                    <div class="d-flex mt-3 contenitoreImmagineBand">
+                      <div
+                        class="d-flex justify-content-center sideContent"
+                      ></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
       <!--/sinistra-->
 
