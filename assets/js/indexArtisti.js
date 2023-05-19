@@ -18,12 +18,10 @@ const playerCheck = () => {
     console.log(player)
     if (player) {
         playerBar.classList.remove("d-none");
-        playerBar.classList.add("d-block");
     }
 }
 
 function closePlayer() {
-    playerBar.classList.remove("d-block");
     playerBar.classList.add("d-none");
     displayOn = false
     localStorage.setItem("display", displayOn)
