@@ -380,6 +380,7 @@ async function firstSelection() {
     // POPOLAZIONE CARD ALBUM
     rigaSelection1.innerHTML = "";
     let j = 1
+
     for (let i of randomArray) {
 
       rigaSelection1.innerHTML += `<div class="cardFlex mb-4 card${j}"><div class="image-wrapper">
@@ -423,12 +424,12 @@ async function firstSelection() {
                 </div>
                 
                  <div class="d-md-none play">
-                      <p class="align-self-center">Placeholder</p>
+                      <p class="align-self-center"><span>${Math.floor(Math.random()*11)+5}brani</span></p>
                       <svg
                         id="bottonePlay"
                         xmlns="http://www.w3.org/2000/svg"
-                        width="50"
-                        height="50"
+                        width="75"
+                        height="75"
                         fill="currentColor"
                         class="bi bi-play-circle"
                         viewBox="0 0 16 16"
@@ -516,12 +517,12 @@ async function secondSelection() {
 </div>
 
  <div class="d-md-none play">
-      <p class="align-self-center">Placeholder</p>
+      <p class="align-self-center"><span>${Math.floor(Math.random()*11)+5}brani</span></p>
       <svg
         id="bottonePlay"
         xmlns="http://www.w3.org/2000/svg"
-        width="50"
-        height="50"
+        width="75"
+        height="75"
         fill="currentColor"
         class="bi bi-play-circle"
         viewBox="0 0 16 16"
@@ -608,12 +609,12 @@ async function thirdSelection() {
                 </div>
                 
                  <div class="d-md-none play">
-                      <p class="align-self-center">Placeholder</p>
+                      <p class="align-self-center"><span>${Math.floor(Math.random()*11)+5}brani</span></p>
                       <svg
                         id="bottonePlay"
                         xmlns="http://www.w3.org/2000/svg"
-                        width="50"
-                        height="50"
+                        width="75"
+                        height="75"
                         fill="currentColor"
                         class="bi bi-play-circle"
                         viewBox="0 0 16 16"
