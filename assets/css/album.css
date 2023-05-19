@@ -1,3 +1,8 @@
+body {
+  overflow-x: hidden;
+  background-color: #121212;
+}
+
 .coloreBody {
   background-color: #121212;
 }
@@ -72,4 +77,47 @@
 .miniIconaHero {
   width: 30px;
   border-radius: 100%;
+}
+
+.testoAlbumStatico {
+  font-size: 1.2rem;
+  margin-left: 3.5%;
+}
+
+.iconeSinistra {
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+
+@media screen and (max-width: 992px) {
+  .iconeMobileDestra {
+    margin-right: 2%;
+  }
+
+  .iconeSinistra {
+    margin: 0;
+  }
+
+  #cont-img-hero {
+    width: 70%;
+  }
+  .heroContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .freccia-mobile {
+    margin-top: 2%;
+    margin-right: 8%;
+  }
+
+  .bodyMobileListaBrani {
+    margin-top: 4%;
+    padding-left: 4%;
+    padding-right: 10%;
+  }
+}
+
+.bodyMobileListaBrani {
+  margin-top: 4%;
+  padding-right: 4%;
 }
