@@ -15,7 +15,8 @@ const playerBar = document.querySelector(".player");
 
 const playerCheck = () => {
     const player = localStorage.getItem("display");
-    if (player === true) {
+    console.log(player)
+    if (player) {
         playerBar.classList.remove("d-none");
         playerBar.classList.add("d-block");
     }
@@ -301,7 +302,6 @@ async function retrieveArtist() {
         }
 
         const myJsonPopuplarTrack = await popularTrack.json();
-
         let j = 1
 
         for (let i of myJsonPopuplarTrack.data) {
@@ -389,7 +389,7 @@ const playlist = () => {
 
 window.onload = () => {
     playerCheck();
-    retrieveArtist()
-    playlist()
+    retrieveArtist();
+    playlist();
 
 }
