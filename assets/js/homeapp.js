@@ -26,9 +26,12 @@ function myRandomFunction(param) {
 
 const playerCheck = () => {
   const player = localStorage.getItem("display");
-  if (player === true) {
+  if (player == "true") {
     playerBar.classList.remove("d-none");
     playerBar.classList.add("d-block");
+    const immagine = localStorage.getItem("image")
+    const nomeAlbum = localStorage.getItem("album")
+    const nomeArtista = localStorage.getItem("artista")
   }
 }
 
@@ -45,7 +48,11 @@ function player(image, album, artista) {
   playerBar.classList.remove("d-none");
   playerBar.classList.add("d-block");
   displayOn = true
-  localStorage.setItem("display", displayOn)
+  localStorage.setItem("display", displayOn);
+  localStorage.setItem("image", image)
+  localStorage.setItem("album", album)
+  localStorage.setItem("artista", artista)
+
 
 
   playerBar.innerHTML = `<div class="croce d-flex flex-row-reverse">

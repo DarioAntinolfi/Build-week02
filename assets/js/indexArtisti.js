@@ -15,14 +15,20 @@ const playerBar = document.querySelector(".player");
 
 const playerCheck = () => {
     const player = localStorage.getItem("display");
-    console.log(player)
-    if (player) {
+
+    if (player == "true") {
         playerBar.classList.remove("d-none");
+        playerBar.classList.add("d-block")
+        const immagine = localStorage.getItem("image")
+        const nomeAlbum = localStorage.getItem("album")
+        const nomeArtista = localStorage.getItem("artista")
+        console.log(nomeArtista)
     }
 }
 
 function closePlayer() {
     playerBar.classList.add("d-none");
+    playerBar.classList.remove("d-block")
     displayOn = false
     localStorage.setItem("display", displayOn)
 }
@@ -34,6 +40,9 @@ function player(image, album, artista) {
     playerBar.classList.add("d-block");
     displayOn = true;
     localStorage.setItem("display", displayOn);
+    localStorage.setItem("image", image)
+    localStorage.setItem("album", album)
+    localStorage.setItem("artista", artista)
 
 
     playerBar.innerHTML = `<div class="croce d-flex flex-row-reverse">
@@ -307,9 +316,9 @@ async function retrieveArtist() {
             elencoBrani.innerHTML += `<div class="my-3 d-flex justify-content-between align-items-center">
             <div class="me-2 list-group-item listaBrani numero">${j}</div>
             <div class="list-group-item listaBrani image">
-              <img class="divImmaginePopolari" src="${i.album.cover}" onclick="player('${i.album.cover_big}','${i.album.title}','${i.artist.name}')"alt="Album Cover">
+              <img class="divImmaginePopolari" src="${i.album.cover}" onclick="location.assign('album.html?id=${i.album.id}')"alt="Album Cover">
             </div>
-            <div class="w-25 list-group-item listaBrani title"><p class="mb-0" onclick="player('${i.album.cover_big}','${i.album.title}','${i.artist.name}' )">${i.title}</p></div>
+            <div class="w-25 list-group-item listaBrani title"><p class="mb-0" onclick="player('${i.album.cover_big}','${i.title}','${i.artist.name}' )">${i.title}</p></div>
             <div class="w-25 list-group-item listaBrani rank">${i.rank}</div>
             <div class="list-group-item listaBrani duration">${time(i.duration)}</div>
         </div>`
